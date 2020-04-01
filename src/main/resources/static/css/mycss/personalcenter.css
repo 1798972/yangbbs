@@ -1,0 +1,23 @@
+.ul-action{
+    border-radius: 5px;
+    background: #fcfcfc;
+    padding: 4px;
+}
+
+.myInformation{
+    background: #fff;
+    border: solid;
+    border-radius: 10px;
+    border-color: #fff;
+
+    padding: 10px 0px 0px 20px;
+}
+
+.question-list-title{
+    color: cadetblue;
+    font-size: 16px;
+}
+
+.question-list{
+    margin: 5px 0px 5px 0px;
+}

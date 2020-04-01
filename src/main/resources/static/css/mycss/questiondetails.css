@@ -1,0 +1,43 @@
+.div-questiondetails-backgroundcolor{
+    background: #fff;
+    border: solid;
+    border-radius: 10px;
+    border-color: #fff;
+}
+
+.question-title{
+    margin: 10px 0 0 0;
+}
+.question-title-username-ect{
+    font-size: 13px;
+    font-weight: normal;
+    color: #999;
+}
+
+.question-operation{
+    margin-right: 20px;
+}
+
+.question-des{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.question-tag{
+    margin: 20px 0 10px 0px;
+}
+
+.question-response{
+    margin: 0 0 20px 0px;
+}
+
+.question-comment-comment{
+    border-color: cornsilk;
+    border-style: ridge;
+    margin: 10px 10px 10px 10px;
+    border-radius: 4px;
+}
+
+.yang{
+
+}

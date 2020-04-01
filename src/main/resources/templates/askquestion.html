@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="img/icon/web_icon.ico" type="image/x-icon"/>
+    <title>提问</title>
+    <!--js+bt-->
+    <script src="/js/jquery-3.4.1.min.js" type="text/javascript"></script>
+    <script src="/js/bootstrap.min.js" type="application/javascript"></script>
+    <script src="/js/myjs/askquestion.js" type="application/javascript"></script>
+    <!--layui-->
+    <script src="/layui/layui.all.js" type="application/javascript"></script>
+    <!--wangEditor-->
+    <script src="/js/wangEditor.min.js" type="application/javascript"></script>
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+    <!--bootstrap-->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/css/mycss/all.css">
+    <link rel="stylesheet" href="/css/mycss/askquestion.css">
+    <link rel="stylesheet" href="/layui/css/layui.css">
+</head>
+
+<body>
+<div th:insert="navigationbar :: nav"></div>
+<!--页面居中-->
+<div id="askQuestion" class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
+    <!--问题名称-->
+    <p style="display: none" id="questionIdInfo" th:text="${questionId}"></p>
+    <div class="input-group input-group-lg col-lg-12">
+        <span class="input-group-addon">问题</span>
+
+        <input th:value="${title}" id="title_input" type="text" class="form-control" placeholder="简短扼要..."
+               aria-describedby="sizing-addon1">
+    </div>
+    <br>
+
+
+    <!--详细内容-->
+    <!--        <textarea id="description_input" placeholder="问题的详细内容..." class="form-control" rows="20"></textarea>-->
+    <!--功能区-->
+    <div id="description-toolbar" class="div-askquestion-backgroundcolor"></div>
+    <div style="padding: 5px 0; color: #ccc"></div>
+    <!--    <p id="hideText" th:text="${description}" style="display: none"></p>-->
+    <!--编辑区-->
+    <div th:utext="${description}" id="description_input" class="div-askquestion-backgroundcolor" style="height: 500px">
+    </div>
+    <script type="text/javascript">
+        var E = window.wangEditor;
+        var editor = new E('#description-toolbar', '#description_input');
+        // 自定义菜单配置
+        editor.customConfig.menus = [
+            'undo',  // 撤销
+            'redo', // 重复
+            'head',  // 标题
+            'bold',  // 粗体
+            'fontSize',  // 字号
+            'fontName',  // 字体
+            'italic',  // 斜体
+            'underline',  // 下划线
+            'strikeThrough',  // 删除线
+            'foreColor',  // 文字颜色
+            'backColor',  // 背景颜色
+            'link',  // 插入链接
+            'list',  // 列表
+            'justify',  // 对齐方式
+            'quote',  // 引用
+            // 'emoticon',  // 表情
+            'image',  // 插入图片
+            'table',  // 表格
+            // 'video',  // 插入视频
+            'code'  // 插入代码
+        ];
+
+        /*其他设置*/
+        // 通过 url 参数配置 debug 模式。url 中带有 wangeditor_debug_mode=1 才会开启 debug 模式
+        // editor.customConfig.debug = true;
+        //粘贴时不清除样式
+        editor.customConfig.pasteFilterStyle = false;
+        // 上传图片到服务器
+        editor.customConfig.uploadImgServer = '/file/upload';
+        // base64 保存图片
+        editor.customConfig.uploadImgShowBase64 = false;
+        // 限制 图片大小20M
+        editor.customConfig.uploadImgMaxSize = 20 * 1024 * 1024;
+        // 限制 一次最多上传50张图片
+        editor.customConfig.uploadImgMaxLength = 50;
+        // 将 timeout 时间改为 5s
+        editor.customConfig.uploadImgTimeout = 5000;
+        // 自定义文件名
+        editor.customConfig.uploadFileName = 'editor_img';
+        //配置编辑区域的 z-index
+        editor.customConfig.zIndex = 100;
+
+        /*上传图片相关操作*/
+
+        editor.customConfig.uploadImgHooks = {
+            before: function (xhr, editor, files) {
+                // 图片上传之前触发
+                // xhr 是 XMLHttpRequst 对象，editor 是编辑器对象，files 是选择的图片文件
+
+                // 如果返回的结果是 {prevent: true, msg: 'xxxx'} 则表示用户放弃上传
+                // return {
+                //     prevent: true,
+                //     msg: '放弃上传'
+                // }
+                // alert("前奏");
+            },
+            success: function (xhr, editor, result) {
+                // 图片上传并返回结果，图片插入成功之后触发
+                // xhr 是 XMLHttpRequst 对象，editor 是编辑器对象，result 是服务器端返回的结果
+                // var url = result.data.url;
+                // alert(JSON.stringify(url));
+                // editor.txt.append(url);
+                // alert("成功");
+            },
+            fail: function (xhr, editor, result) {
+                // 图片上传并返回结果，但图片插入错误时触发
+                // xhr 是 XMLHttpRequst 对象，editor 是编辑器对象，result 是服务器端返回的结果
+                // alert("失败");
+            },
+            error: function (xhr, editor) {
+                // 图片上传出错时触发
+                // xhr 是 XMLHttpRequst 对象，editor 是编辑器对象
+                // alert("错误");
+            },
+            // 如果服务器端返回的不是 {errno:0, data: [...]} 这种格式，可使用该配置
+            // （但是，服务器端返回的必须是一个 JSON 格式字符串！！！否则会报错）
+            customInsert: function (insertImg, result, editor) {
+                // 图片上传并返回结果，自定义插入图片的事件（而不是编辑器自动插入图片！！！）
+                // insertImg 是插入图片的函数，editor 是编辑器对象，result 是服务器端返回的结果
+                // 举例：假如上传图片成功后，服务器端返回的是 {url:'....'} 这种格式，即可这样插入图片：
+                var url = result.url;
+                insertImg(url);
+                // result 必须是一个 JSON 格式字符串！！！否则报错
+            }
+        };
+        /*创建编辑器*/
+        editor.create();
+
+        //发布问题
+        function checkQuestion() {
+
+            //标题
+            var title = $("#title_input").val();
+
+            //内容
+            //存的只是简单的文本  var description = editor.txt.text();
+            //存的是带html样式的文本
+            var description = editor.txt.html();
+
+            //标签
+            var tag = $("#tag_input").val();
+
+            var questionId = $("#questionIdInfo").text();
+            if (title === "" || title === null) {
+                $("#question_info").show();
+                $("#question_error").html("<b>问题</b>不能为空!");
+            } else if (description === "" || description === null) {
+                $("#question_info").show();
+                $("#question_error").html("<b>内容</b>不能为空!");
+            } else if (tag === "" || tag === null) {
+                $("#question_info").show();
+                $("#question_error").html("<b>标签</b>不能为空!");
+            } else {
+                $("#question_info").hide();
+                // return;
+                //ajax发布问题操作
+
+                $.ajax({
+                    url: "/askQuestion",
+                    data: {
+                        "questionId": questionId,
+                        "title": title,
+                        "description": description,
+                        "tag": tag
+                    },
+                    type: "post",
+                    //返回类型
+                    datatype: "text",
+                    success: function (data) {
+                        // "state": "success",
+                        //     "errorCode": 9200,
+                        //     "des": "问题发布成功"
+                        if (data.state === "success") {
+                            //发布成功
+                            layer.msg('问题发布成功,2秒后将为您跳转至主页...', {
+                                icon: 6,
+                                skin: 'layer-ext-moon'
+                            });
+                            //2s后跳转
+                            setTimeout(function () {
+                                location.href = '/';
+                            }, 2000);
+                            // $("#askQuestion").hide();
+                            // $("#askQuestionSuccess").show();
+                            // //跳转
+                            // setInterval(go, 1000);
+                        } else {
+                            //发布失败
+                            var errorStr = data.des;
+                            $("#question_info").show();
+                            $("#question_error").html('<b>' + errorStr + '</b>');
+                        }
+                    },
+                    error: function () {
+
+                    }
+                });
+            }
+
+        }
+
+    </script>
+
+    <br>
+    <!--点击标签-->
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tag-select" id="tag_select">
+        <!--选择标签-->
+        <!--标签1-->
+        <div class="dropup col-lg-2 col-md-2 col-sm-2 col-xs-4">
+            <button class="tag-select-button btn btn-default dropdown-toggle" type="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                编程语言
+                <span class="caret"></span>
+            </button>
+            <ul id="ul_1" class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <li><a href="#">java</a></li>
+                <li><a href="#">php</a></li>
+                <li><a href="#">python</a></li>
+                <li><a href="#">c</a></li>
+                <li><a href="#">c++</a></li>
+                <li><a href="#">javascript</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">编程语言_其他</a></li>
+            </ul>
+        </div>
+        <!--标签2-->
+        <div class="dropup col-lg-2 col-md-2 col-sm-2 col-xs-4 ">
+            <button class="tag-select-button btn btn-default dropdown-toggle" type="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                平台框架
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <li><a href="#">spring</a></li>
+                <li><a href="#">struts</a></li>
+                <li><a href="#">mybatis</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">平台框架_其他</a></li>
+            </ul>
+        </div>
+        <!--标签3-->
+        <div class="dropup col-lg-2 col-md-2 col-sm-2 col-xs-4">
+            <button class=" tag-select-button btn btn-default dropdown-toggle" type="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                开发工具
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <li><a href="#">git</a></li>
+                <li><a href="#">maven</a></li>
+                <li><a href="#">idea</a></li>
+                <li><a href="#">eclipse</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">开发工具_其他</a></li>
+            </ul>
+        </div>
+        <!--标签4-->
+        <div class="dropup col-lg-2 col-md-2 col-sm-2 col-xs-4">
+            <button class=" tag-select-button btn btn-default dropdown-toggle" type="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                数据库
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <li><a href="#">mysql</a></li>
+                <li><a href="#">sqlserver</a></li>
+                <li><a href="#">oracle</a></li>
+                <li><a href="#">redis</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">数据库_其他</a></li>
+            </ul>
+        </div>
+        <!--标签5-->
+        <div class="dropup col-lg-2 col-md-2 col-sm-2 col-xs-4">
+            <button class=" tag-select-button btn btn-default dropdown-toggle" type="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                服务器
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <li><a href="#">windows</a></li>
+                <li><a href="#">linux</a></li>
+                <li><a href="#">docker</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">服务器_其他</a></li>
+            </ul>
+        </div>
+        <!--标签6-->
+        <div class="dropup col-lg-2 col-md-2 col-sm-2 col-xs-4">
+            <button class=" tag-select-button btn btn-default dropdown-toggle" type="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                其他
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <li><a href="#">广告</a></li>
+                <li><a href="#">活动推荐</a></li>
+                <li><a href="#">聊天灌水</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">其他</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--标签输入框-->
+    <div class="input-group input-group-lg col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 tag-select-input">
+            <div class="input-group">
+             <span class="input-group-btn">
+                 <button class="btn btn-default" type="button">标签</button>
+             </span>
+                <input th:value="${tag}" class="form-control" aria-hidden="true" id="tag_input" type="text"
+                       placeholder="请在上方选择问题标签..."
+                       disabled>
+            </div>
+        </div>
+        <!--两个删除按钮-->
+        <button type="button" class="btn btn-danger" onclick="deleteOneTag()">X</button>
+        <button type="button" class="btn btn-danger" onclick="deleteAllTags()">全部删除</button>
+    </div>
+    <br>
+    <!--警告框-->
+    <div class="alert alert-danger" id="question_info" style="display: none" role="alert">提示:<span
+            id="question_error"></span></div>
+    <!--发布按钮-->
+    <button onclick="checkQuestion()" type="button" class="btn btn-primary btn-lg"
+            style="float: right;margin-bottom: 20px;">发布问题
+    </button>
+</div>
+
+<!--发布成功后的跳转界面 已经改为layui的信息提示-->
+<!--<div id="askQuestionSuccess" style="display: none" class="alert alert-success col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-12 col-xs-12" role="alert">
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="col-lg-4 col-lg-offset-4">
+        <span><b>问题发布成功!即将自动为您跳转...倒计时
+            <span id="successtime" style="color: red"></span>
+            <br>若长时间无响应,您也可以</b></span>
+        <b><span style="color: #0000FF"><a href="/">点击此处</a></span></b>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+
+</div>-->
+</body>
+</html>

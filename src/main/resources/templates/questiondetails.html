@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="img/icon/web_icon.ico" type="image/x-icon"/>
+    <title th:text="${questionDetailsDTO.question.title}"></title>
+    <!--js+bt-->
+    <script src="js/jquery-3.4.1.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="application/javascript"></script>
+    <script src="js/moment.min.js" type="application/javascript"></script>
+    <script src="/layui/layui.all.js" type="application/javascript"></script>
+    <script src="/js/myjs/questiondetails.js" type="application/javascript"></script>
+    <!--vue axios qs-->
+    <!--    <script src="/js/vue.js"></script>-->
+    <!--开发版本有提示信息-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.bootcss.com/qs/6.5.1/qs.min.js"></script>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/mycss/all.css">
+    <link rel="stylesheet" href="css/mycss/questiondetails.css">
+    <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/layui/css/layui.css">
+</head>
+<body onload="selectThumbCount()">
+<!--导航栏-->
+<div th:insert="navigationbar :: nav"></div>
+
+<!--问题详情-->
+<div class="col-lg-8 col-lg-offset-2 div-questiondetails-backgroundcolor">
+    <!--问题部分-->
+    <div class="col-lg-12">
+        <!--发布者头像-->
+        <div class="col-lg-1">
+        <span><img th:src="${questionDetailsDTO.user.avatar}" alt="用户头像"
+                   class="img-rounded" style="width: 50px;height: 50px;margin: 20px 0 0 0;"></span>
+        </div>
+
+        <div class="col-lg-11 question-title">
+            <!--标题-->
+            <div>
+                <h4><span th:text="${questionDetailsDTO.question.title}"></span></h4>
+            </div>
+            <!--问题相关信息-->
+            <div class="question-title-username-ect">
+                <span th:text="'发布者:'+${questionDetailsDTO.user.nickname}"></span>
+                <span th:text="'浏览数:'+${questionDetailsDTO.question.viewCount}"></span>
+                <span
+                        th:text="'编辑于:'+${#dates.format(questionDetailsDTO.question.gmtModified,'yyyy/MM/dd HH:mm')}">
+            </span>
+            </div>
+        </div>
+        <!--标签-->
+        <div class="col-lg-12 question-tag">
+            <span th:each="oneTag : ${questionDetailsDTO.question.tag.split(',')}">
+                <span class="label label-primary " th:text="${oneTag}"></span>
+            </span>
+        </div>
+        <!--        <hr class="col-lg-12">-->
+        <!--其他操作-->
+        <div class="col-lg-12">
+            <!--点赞-->
+            <a style="cursor: pointer;" onclick="giveOrCancelThumb()">
+            <span class="question-operation">
+                <i id="thumb" class="fa fa-thumbs-o-up fa-lg" aria-hidden="true"></i><span id="thumbNum"></span>
+            </span>
+            </a>
+            <span class="question-operation" th:if="${session.user == null}">
+                <i class="fa fa-lock fa-lg" aria-hidden="true"></i>登录后可进行点赞、评论等操作。
+            </span>
+
+            <!--编辑-->
+            <!--th:href="@{'/askQuestion/'+${questionDetailsDTO.question.id}}"-->
+            <a th:href="@{/askQuestion/edit(id=${questionDetailsDTO.question.id})}"
+               th:if="${session.user==questionDetailsDTO.user}">
+            <span class="question-operation" style="cursor: pointer;">
+                 <i class="fa fa-edit fa-lg" aria-hidden="true"></i>编辑
+            </span>
+            </a>
+            <!--删除-->
+            <p id="deleteId" style="display: none" th:text="${questionDetailsDTO.question.id}"></p>
+            <p id="sessionUserId" style="display: none" th:text="${session.user==null} ? '' : ${session.user.id}"></p>
+            <!--删除-->
+            <a onclick="ff()" style="cursor: pointer;" th:if="${session.user==questionDetailsDTO.user}">
+                <script>
+                    function ff() {
+                        layer.confirm('您确定要删除该问题？', {
+                            btn: ['我确定', '还是算了吧'] //按钮
+                        }, function () {
+                            //点击确定   //执行ajax操作
+                            var questionId = $("#deleteId").text();
+
+                            $.ajax({
+                                url: "/question/delete",
+                                type: "post",
+                                data: {
+                                    "questionId": questionId
+                                },
+                                datatype: "text",
+                                success: function (data) {
+                                    if (data === "success") {
+                                        layer.msg('问题已经成功删除,2秒后将自动跳转...', {
+                                            icon: 1,
+                                            time: 3000
+                                        });
+                                        //2s后跳转
+                                        setTimeout(function () {
+                                            location.href = '/';
+                                        }, 2000);
+                                    } else {
+                                        layer.msg('问题删除失败了...', {icon: 5});
+                                    }
+                                }
+                            });  /*ajax结束*/
+                        });
+                    }
+                </script>
+                <span>
+                <i class="fa fa-trash fa-lg" aria-hidden="true"></i>删除
+            </span>
+            </a>
+        </div>
+        <hr class="col-lg-12">
+        <!--问题详情-->
+        <div class="col-lg-12 question-des">
+            <p th:utext="${questionDetailsDTO.question.description}"></p>
+            <!-- <pre th:text=""></pre>-->
+        </div>
+        <hr class="col-lg-12">
+    </div>
+
+    <!--回复数目-->
+    <div class="col-lg-12" style="margin: 5px 0 10px 0px;">
+    <span style="font-size: 20px"><i style="font-size: 20px" class="layui-icon layui-icon-reply-fill"></i>
+        <span
+                id="commentCount" th:text="${questionDetailsDTO.question.commentCount}">>
+        </span>
+        <span>条回复</span>
+    </span>
+    </div>
+
+    <!--评论展示-->
+    <!--    <p id="nowCount" style="display: none"></p>-->
+    <div id="questionComment" class="col-lg-12 question-response">
+        <p id="qid" style="display: none" th:text="${questionDetailsDTO.question.id}"></p>
+        <!--每一条评论-->
+        <div style="margin: 15px 0 15px 0;" class="layui-collapse" id="responseContent" v-for="comment in comments">
+            <hr>
+            <!--头像-->
+            <span>
+                <img v-bind:src="comment.avatar"
+                     class="img-rounded" style="width: 30px;height: 30px;margin: 10px 0px 10px 20px;"/>
+            </span>
+            <!--昵称-->
+            <span>{{ comment.nickname }}</span>
+            <!--moment().subtract(1, 'days').calendar(); -->
+            <!--评论时间-->
+            <span>{{ comment.gmtCreate | dateformat('YYYY-MM-DD HH:mm:ss')}}</span>
+
+            <!--子评论数目-->
+            <span class="yang" onclick="clickResponse(this)" @click="getCommentInfo($event,0)"
+                  v-bind:data-id="comment.id"
+                  style="cursor: pointer;float: right;margin: 20px 20px 0 0;">
+            <i class="fa fa-commenting-o" aria-hidden="true"></i>{{comment.commentCount}}
+            </span>
+
+            <!--子评论内容-->
+            <div class="layui-colla-item">
+                <h2 class="layui-colla-title" style="cursor: text;">
+                    {{comment.content}}
+                </h2>
+                <!--子评论展示区域-->
+                <div class="layui-colla-content question-comment-comment">
+                    <p id="cid" style="display:none">{{comment.id}}</p>
+                    <span>
+                        <i class="layui-icon layui-icon-align-center"></i>
+                        大家是这样说的
+                        </span>
+                    <br>
+                    <hr>
+                    <!--每一条子评论-->
+                    <div v-for="secondComment in secondComments"
+                         v-bind:data-cid="comment.id" v-bind:data-pid="secondComment.pid"
+                         v-if="comment.id == secondComment.pid">
+                        <!--头像-->
+                        <span>
+                        <img v-bind:src="secondComment.avatar"
+                             class="img-rounded" style="width: 30px;height: 30px;margin: 10px 0px 10px 20px;"/>
+                         </span>
+                        <!--昵称-->
+                        <span>{{ secondComment.nickname }}</span>
+                        <!--moment().subtract(1, 'days').calendar(); -->
+                        <!--评论时间-->
+                        <span>{{ secondComment.gmtCreate | dateformat('YYYY-MM-DD HH:mm:ss')}}</span>
+                        <h2 class="layui-colla-title" style="cursor: text;">
+                            {{secondComment.content}}
+                        </h2>
+                    </div>
+                    <!--加载更多按钮-->
+                    <button onclick="loadCommentMore(this)" style="margin: 5px 0px 20px 0px;" type="button"
+                            class="layui-btn layui-btn-primary layui-btn-xs col-lg-12 ">
+                    </button>
+                    <!--回复评论-->
+                    <textarea id="commentCommentContent" style="margin-top: 10px" autocomplete="off" rows="2" name=""
+                              required
+                              lay-verify="required"
+                              placeholder="你对此的看法？"
+                              class="layui-textarea"></textarea>
+                    <button style="margin-top: 10px" onclick="commentOneComment(this)" type="button"
+                            class="layui-btn layui-btn-normal">发表
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!--加载更多按钮-->
+        <button id="loadMore" onclick="loadMore()" style="background: white;" type="button"
+                class="btn btn-default col-lg-12">
+        </button>
+    </div>
+
+
+    <script>
+        //初始化时加载五条
+        var rows = 5;
+        var qid = $("#qid").text();
+        var secondRows = 5;
+        moment.locale('zh-cn');
+        Vue.filter('dateformat', (dataStr, pattern = 'YYYY-MM-DD HH:mm:ss') => {
+            return moment(dataStr).format(pattern)
+        });
+
+        var app = new Vue({
+            el: '#questionComment',
+            data: {
+                comments: 0,
+                secondComments: 0
+            },
+            methods: {
+                //1.加载回复信息
+                getInfo: function () {
+                    var that = this;
+                    axios({
+                        method: 'post',
+                        url: '/question/getQuestionCommentList',
+                        data: {
+                            qid: qid,
+                            rows: rows
+                        }
+                    }).then(function (response) {
+                        that.comments = response.data;
+                        setTimeout(function () {
+                            checkLoadTag();
+                        }, 0);
+                        rows = rows + 5;
+                    })
+                        .catch(function (reason) {
+                            console.log(reason);
+                        });
+                },
+
+                //2.加载二级评论信息
+                getCommentInfo(event, flag) {
+                    //！！！！！！！！！！怎么设置数据渲染的区域？？  3.24
+
+                    var that = this;
+                    //由于是点击的加载更多 第一次点就是显示十条
+                    if (flag === 2) {
+                        if (secondRows <= 10) {
+                            secondRows = 10;
+                        }
+                    }
+                    //数量的span区域调用
+                    if (flag === 0) {
+                        var cid = event.currentTarget.getAttribute('data-id');
+                        var countTag = event.currentTarget;
+                    } else {
+                        //发布评论或者加载更多时调用
+                        var cid = event.parentElement.parentElement.previousElementSibling.getAttribute('data-id');
+                        var countTag = event.parentElement.parentElement.previousElementSibling;
+                    }
+                    axios({
+                        method: 'post',
+                        url: '/question/getCommentCommentList',
+                        data: {
+                            cid: cid,
+                            rows: secondRows
+                        }
+                    }).then(function (response) {
+                        //刷新的内容应该是当前子评论区域
+                        that.secondComments = response.data;
+                        setTimeout(function () {
+                            checkLoadCommentTag(countTag);
+                        }, 0);
+                        if (flag === 2) {
+                            secondRows = secondRows + 5;
+                        }
+                    }).catch();
+                }
+            }
+        });
+    </script>
+    <!--发表评论-->
+    <div class="col-lg-12">
+        <div style="margin-bottom: 10px" th:if="${session.user==null}">
+       <span>
+        <i class="fa fa-user fa-2x" aria-hidden="true"></i>未登录用户
+        </span>
+        </div>
+        <textarea id="commentQuestionContent" autocomplete="off" rows="3" name="" required lay-verify="required"
+                  placeholder="你对此的看法？"
+                  class="layui-textarea"></textarea>
+        <button onclick="commentOneQuestion()" style="float: right;margin: 20px 0 20px 0;" type="button"
+                class="layui-btn">发表
+        </button>
+    </div>
+</div>
+
+<!--相关问题-->
+<div class="col-lg-2">
+    <div class="bs-example" data-example-id="hoverable-table">
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th>相关问题</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="aboutQuestionDTO : ${aboutQuestionDTOList}">
+                <td><i class="fa fa-quora" aria-hidden="true"></i>&nbsp;<a
+                        th:href="@{/question(id=${aboutQuestionDTO.id})}"
+                        th:text="${#strings.abbreviate(aboutQuestionDTO.title,15)}"></a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>

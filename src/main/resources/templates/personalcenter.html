@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <!--此处在center目录下 要加/了-->
+    <link rel="icon" href="img/icon/web_icon.ico" type="image/x-icon"/>
+    <title>个人中心</title>
+    <!--js+bt-->
+    <script src="/js/jquery-3.4.1.min.js" type="text/javascript"></script>
+    <script src="/js/bootstrap.min.js" type="application/javascript"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.bootcss.com/qs/6.5.1/qs.min.js"></script>
+    <!-- <script src="/js/moment.min.js" type="application/javascript"></script>-->
+    <script src="/js/myjs/personalcenter.js" type="application/javascript"></script>
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/css/mycss/all.css">
+    <link rel="stylesheet" href="/css/mycss/personalcenter.css">
+    <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+    <!--js+bt-->
+</head>
+<body>
+<!--导航栏-->
+<div id="navigation" class="col-lg-12" th:insert="navigationbar :: nav"></div>
+
+<!--导航栏下面-->
+<div id="personalcenter" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <!--左边是展示区域-->
+    <div class="col-lg-6 col-lg-offset-2 login-all">
+        <!--我的资料-->
+        <div id="myInformation" th:if="${action == 'myInformation'}">
+            <div class="panel panel-default">
+                <div class="panel-body" style="text-align: center">
+                    个人资料
+                </div>
+            </div>
+            <div class="myInformation">
+                <b><span>头像:</span></b>
+                <br><img th:src="${myInfomationDTO.avatar}" alt="..." class="img-thumbnail"><br>
+                <br>
+                <b><span>昵称:</span></b>
+                <h5 th:text="${myInfomationDTO.nickname}"></h5><br>
+
+                <b><span>羊羊号:</span></b>
+                <h5 th:text="${myInfomationDTO.yyNumber}"></h5><br>
+
+                <b><span>手机号:</span></b>
+                <h5 th:text="${myInfomationDTO.telNumber}"></h5><br>
+
+                <b><span>QQ号:</span></b>
+                <h5 th:text="${myInfomationDTO.qqNumber}"></h5><br>
+
+                <b><span>GitHub号:</span></b>
+                <h5 th:text="${myInfomationDTO.githubNumber}"></h5><br>
+
+                <b><span>注册时间:</span></b>
+                <h5 th:text="${#dates.format(myInfomationDTO.gmtCreate,'yyyy年MM月dd日')}"></h5><br>
+
+            </div>
+        </div>
+
+        <!--我的问题-->
+        <div th:if="${action == 'myQuestion'}">
+            <table class="table table-striped myInformation">
+                <tr class="question-list" th:each="question : ${myQuestionAndPageDTOList.myQuestionDTOList}"
+                    th:if="${myQuestionAndPageDTOList.myQuestionDTOList != null}">
+                    <span th:text="${question.id}" style="display: none"></span>
+                    <td class="question-list-title">
+                        <i class="fa fa-list-alt" aria-hidden="true"></i>
+                        <a th:href="@{/question(id=${question.id})}" th:text="${question.title}"></a>
+                    </td>
+                    <td>
+                        <span style="float: right;"
+                              th:text="${#dates.format(question.gmtCreate,'MM月dd日(yyyy)')}"></span>
+                    </td>
+                </tr>
+            </table>
+
+            <span style="color: antiquewhite;" th:if="${myQuestionAndPageDTOList.myQuestionDTOList.size() == 0}">您还未发布过问题,点击右上角的提问即可发布问题哦。</span>
+            <!--分页显示-->
+            <nav style="    margin: -30px 0 0 0px" aria-label="Page navigation"
+                 th:if="${myQuestionAndPageDTOList.myQuestionDTOList.size() != 0}">
+                <ul class="pagination">
+                    <!--第一页-->
+                    <li>
+                        <a th:href="@{/center/myQuestion(page=1)}" aria-label="Previous"
+                           th:if="${myQuestionAndPageDTOList.pageDTO.hasFirst == true}">
+                            <span aria-hidden="true">&lt;&lt;</span>
+                        </a>
+                    </li>
+                    <!--上一页-->
+                    <li>
+                        <a th:href="@{/center/myQuestion(page=${myQuestionAndPageDTOList.pageDTO.nowPage}-1)}"
+                           aria-label="Previous"
+                           th:if="${myQuestionAndPageDTOList.pageDTO.hasPrevious == true}">
+                            <span aria-hidden="true">&lt;</span>
+                        </a>
+                    </li>
+                    <!--中间的数字 是当前页时加上active属性-->
+                    <li th:class="${ page == myQuestionAndPageDTOList.pageDTO.nowPage} ? active : '' "
+                        th:each="page : ${myQuestionAndPageDTOList.pageDTO.pageNumbers}">
+                        <a th:href="@{/center/myQuestion(page=${page})}" th:text="${page}"></a>
+                    </li>
+                    <!--下一页-->
+                    <li>
+                        <a th:href="@{/center/myQuestion(page=${myQuestionAndPageDTOList.pageDTO.nowPage}+1)}"
+                           aria-label="Next"
+                           th:if="${myQuestionAndPageDTOList.pageDTO.hasNext == true}">
+                            <span aria-hidden="true">&gt;</span>
+                        </a>
+                    </li>
+                    <!--最后一页-->
+                    <li>
+                        <a th:href=" @{/center/myQuestion(page=${myQuestionAndPageDTOList.pageDTO.endPage})}"
+                           aria-label="Next"
+                           th:if="${myQuestionAndPageDTOList.pageDTO.hasEnd == true}">
+                            <span aria-hidden="true">&gt;&gt;</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+
+        <!--消息通知-->
+        <div th:if="${action == 'myNotice'}">
+            <table class="table table-striped myInformation">
+                <tr class="question-list" th:each="notice : ${myNoticeAndPageDTO.myNoticeDTOList}"
+                    th:if="${myNoticeAndPageDTO.myNoticeDTOList != null}">
+                    <span th:text="${notice.id}" style="display: none"></span>
+                    <span th:text="${notice.outerId}" style="display: none"></span>
+                    <span th:text="${notice.clickId}" style="display: none"></span>
+
+                    <td class="question-list-title">
+                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                        <a th:text="${notice.creatorName}"></a>
+                        <span >评论了你的</span>
+                        <b><span th:if="${#strings.containsIgnoreCase(notice.ntype,'1')}" style="color: rebeccapurple">评论:</span></b>
+                        <b><span th:if="${#strings.containsIgnoreCase(notice.ntype,'0')}" style="color: #eb9316">问题:</span></b>
+
+                        <!--先经过读取操作-->
+                        <a th:href="@{/noticeToQuestion(noticeId=${notice.id},clickId=${notice.clickId})}" th:utext="${#strings.abbreviate(notice.outerTitle,10)}"></a>
+
+                        <span class="label label-danger" th:if="${notice.nstate} == 1">未读</span>
+                    </td>
+                    <td>
+                        <span style="float: right;"
+                              th:text="${#dates.format(notice.gmtCreate,'yyyy/MM/dd HH:mm')}"></span>
+                    </td>
+                </tr>
+            </table>
+
+            <span style="color: antiquewhite;" th:if="${myNoticeAndPageDTO.myNoticeDTOList.size() == 0}">您的通知消息为空,赶快去和其他用户互动吧!</span>
+            <nav style="margin: -30px 0 0 0px" aria-label="Page navigation"
+                 th:if="${myNoticeAndPageDTO.myNoticeDTOList.size() != 0} ">
+                <ul class="pagination">
+                    <!--第一页-->
+                    <li>
+                        <a th:href="@{/center/myNotice(page=1)}" aria-label="Previous"
+                           th:if="${myNoticeAndPageDTO.pageDTO.hasFirst == true}">
+                            <span aria-hidden="true">&lt;&lt;</span>
+                        </a>
+                    </li>
+                    <!--上一页-->
+                    <li>
+                        <a th:href="@{/center/myNotice(page=${myNoticeAndPageDTO.pageDTO.nowPage}-1)}"
+                           aria-label="Previous"
+                           th:if="${myNoticeAndPageDTO.pageDTO.hasPrevious == true}">
+                            <span aria-hidden="true">&lt;</span>
+                        </a>
+                    </li>
+                    <!--中间的数字 是当前页时加上active属性-->
+                    <li th:class="${ page == myNoticeAndPageDTO.pageDTO.nowPage} ? active : '' "
+                        th:each="page : ${myNoticeAndPageDTO.pageDTO.pageNumbers}">
+                        <a th:href="@{/center/myNotice(page=${page})}" th:text="${page}"></a>
+                    </li>
+                    <!--下一页-->
+                    <li>
+                        <a th:href="@{/center/myNotice(page=${myNoticeAndPageDTO.pageDTO.nowPage}+1)}"
+                           aria-label="Next"
+                           th:if="${myNoticeAndPageDTO.pageDTO.hasNext == true}">
+                            <span aria-hidden="true">&gt;</span>
+                        </a>
+                    </li>
+                    <!--最后一页-->
+                    <li>
+                        <a th:href=" @{/center/myNotice(page=${myNoticeAndPageDTO.pageDTO.endPage})}"
+                           aria-label="Next"
+                           th:if="${myNoticeAndPageDTO.pageDTO.hasEnd == true}">
+                            <span aria-hidden="true">&gt;&gt;</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+
+    </div>
+    <!--右边是功能选择-->
+    <div class="col-lg-2">
+        <ul class="nav nav-pills nav-stacked ul-action">
+            <li th:class="${action=='myInformation'} ? 'active' : '' " role="presentation">
+                <a href="/center/myInformation">我的资料</a>
+            </li>
+            <li th:class="${action=='myQuestion'} ? 'active' : '' " role="presentation">
+                <a href="/center/myQuestion">我的问题</a>
+            </li>
+            <li th:class="${action=='myNotice'} ? 'active' : '' " role="presentation">
+                <a href="/center/myNotice">我的消息
+                    <span style="float: right" th:text="${session.unReadNumber}"></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
+
+<script>
+    var personal = new Vue({
+        el: '#personalcenter',
+        data: {},
+        methods: {
+            getMyInformation() {
+
+            },
+            getMyQuestions() {
+
+            }
+        }
+    });
+</script>

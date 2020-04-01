@@ -1,0 +1,18 @@
+.div-askquestion-backgroundcolor{
+    background: #edeef0;
+    border: solid;
+    border-radius: 2px;
+    border-color: #f3f8f3;
+}
+
+.tag-select{
+    margin: 0 0 2px -30px;
+    /*padding: 0 400px 0 15px;*/
+}
+
+.tag-select-button{
+    width: 100%;
+}
+.tag-select-input{
+    margin: 0 0 0 -15px;
+}

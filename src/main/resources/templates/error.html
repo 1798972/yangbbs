@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/img/icon/web_icon.ico" type="image/x-icon"/>
+    <title>错误页面</title>
+
+    <script src="/js/jquery-3.4.1.min.js" type="text/javascript"></script>
+    <script src="/js/bootstrap.min.js" type="application/javascript"></script>
+    <script src="/layui/layui.all.js" type="application/javascript"></script>
+    <script src="/js/myjs/error.js" type="application/javascript"></script>
+    <link rel="stylesheet" href="/layui/css/layui.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/css/mycss/error.css">
+</head>
+<body onload="checkErrorInfo()" style="background: #eee;">
+<div>
+<!--    <div class="col-lg-8 col-lg-offset-2">
+        <img style="height: -webkit-fill-available;" src="/img/error1.png">
+    </div>-->
+    <br>
+    <br>
+    <br>
+
+    <div class="jumbotron col-lg-8 col-lg-offset-2">
+        <h1 class="col-lg-12">出出出出出错了!!!</h1>
+        <p>
+            <i style="font-size: 30px;"
+               class="left layui-icon layui-icon-loading layui-icon layui-anim layui-anim-rotate layui-anim-loop"></i>
+            <span id="errorInfo" th:text="${message}"></span>
+        </p>
+        <a class="btn btn-primary btn-lg left" href="/" role="button">返回主页</a></p>
+    </div>
+</div>
+</body>
+</html>

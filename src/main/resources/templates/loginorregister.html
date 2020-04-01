@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="img/icon/web_icon.ico" type="image/x-icon"/>
+    <title>登录/注册</title>
+
+    <script src="js/jquery-3.4.1.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="application/javascript"></script>
+    <script src="js/myjs/loginorregister.js" type="application/javascript"></script>
+    <script src="js/myjs/loginorregister2.js" type="application/javascript"></script>
+    <script src="/layui/layui.all.js" type="application/javascript"></script>
+    <link rel="stylesheet" href="/layui/css/layui.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/mycss/loginorregister.css">
+    <link rel="stylesheet" href="css/mycss/all.css">
+    <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+</head>
+
+<body onload="getCodeNow()">
+<!--大小6格 从3开始 即3 6 3-->
+<button type="button" class="btn btn-info"><a style="color: black" href="/" th:text="返回首页"></a></button>
+<div class="col-lg-6 col-lg-offset-3 col-md-12 col-sm-12 col-xs-12 login-all">
+
+    <!--表头提示-->
+    <div class="page-header col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <h1>羊羊社区</h1>
+    </div>
+
+    <!--操作区域-->
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+
+        <!--
+        id="user_login"
+        id="user_register"
+        对ul下的li 设计点击事件
+        -->
+        <!--功能选择-->
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('ul li').click(function () {
+                    //获得点击元素的id
+                    var clickLi = $(this).attr("id");
+                    if (clickLi === 'li_login') {
+                        //显示selectDiv1 隐藏2
+                        $("#user_register").hide();
+                        $("#user_login").show();
+                        $("#li_login").addClass("active");
+                        $("#li_register").removeClass("active");
+                    } else {
+                        //显示selectDiv2 隐藏1
+                        $("#user_login").hide();
+                        $("#user_register").show();
+                        $("#li_register").addClass("active");
+                        $("#li_login").removeClass("active");
+                    }
+                });
+            });
+        </script>
+
+        <!--登录/注册选择-->
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <ul class="nav nav-tabs">
+                <li id="li_login" class="active" role="presentation"><a href="#"><span
+                        style="color: black"><b>登录</b></span></a></li>
+                <li id="li_register" role="presentation"><a href="#"><span style="color: black"><b>注册</b></span></a>
+                </li>
+            </ul>
+        </div>
+
+        <!--登录部分-->
+        <div id="user_login" class="col-lg-8 col-lg-offset-2 col-md-12 col-sm-12 col-xs-12 login-form">
+            <style>
+
+            </style>
+            <form class="form-horizontal col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <!--用户名-->
+                <div class="form-group">
+                    <label class="col-lg-2 col-sm-2 control-label" for="loginName">账号</label>
+                    <div class="col-lg-8 col-sm-8">
+                        <input type="text" class="form-control" id="loginName" name="loginUsername"
+                               placeholder="网站用户名" onblur="checkLoginName()">
+                    </div>
+                    <span id="checkLoginNameSuccess" style="display: none"><i class="fa fa-check-circle fa-lg check-success" aria-hidden="true"></i></span>
+                </div>
+                <!--密码-->
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="loginPassword">密码</label>
+                    <div class="col-sm-8">
+                        <input type="password" class="form-control" id="loginPassword" name="loginPassword"
+                               placeholder="用户密码" onblur="checkLoginPassword()">
+                    </div>
+                    <span id="checkLoginPwdSuccess" style="display: none"><i class="fa fa-check-circle fa-lg check-success" aria-hidden="true"></i></span>
+                </div>
+                <!--登录按钮-->
+                <div class="form-group">
+                    <div id="loginUserByBtn"><!--class="col-sm-offset-2 col-lg-8"-->
+                        <button type="button" onclick="loginUserByBtn()"
+                                class="btn btn-success col-lg-6 col-md-6 col-sm-6 col-xs-6 col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-xs-offset-3">
+                            登录
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <!--第三方登录-->
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <b class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-xs-offset-3">记不住密码？
+                        <a href="#" style="color: #00FF00">点此找回</a></b>
+                </div>
+
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="third-login-all col-lg-6 col-md-6 col-sm-6 col-xs-6 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-2">
+                        <a class="col-lg-4  col-md-4 col-sm-4 col-xs-4">
+                            <img src="img/icon/login_tel.png" alt="手机登录">
+                        </a>
+                        <!--QQ登录-->
+                        <a class="col-lg-4  col-md-4 col-sm-4 col-xs-4"  href="
+https://graph.qq.com/oauth2.0/authorize?response_type=code&client_id=101862905&redirect_uri=http://yang37.cn:7979/qqcallback&state=1">
+                            <img src="img/icon/login_qq2.png" alt="QQ登录">
+                        </a>
+                        <!--GitHub登录-->
+                        <a class="col-lg-4  col-md-4 col-sm-4 col-xs-4" href="https://github.com/login/oauth/authorize?client_id=f88b5c84c99ddafc7184&http://yang37.cn:7979/githubcallback&scope=user&state=1">
+                            <img src="img/icon/login_github.png" alt="Github登录" style="margin-left: 5px;">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--注册部分-->
+        <div id="user_register" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 login-form" style="display: none">
+
+            <form onsubmit="return checkRegisterInfo()" class="form-horizontal" id="form_register" method="post"
+                  action="/register">
+                <!--用户名-->
+                <div class="form-group">
+                    <label for="registerName" class="col-lg-2 col-sm-2 control-label">用户名</label>
+                    <div class="col-lg-6 col-sm-6">
+                        <input type="text" class="form-control" id="registerName" onblur="ajaxCheckRegisterName()"
+                               placeholder="4到16位(字母、数字、下划线、减号)">
+                    </div>
+<!--                    <span id="checkNameInfo" style="display: none"></span>-->
+                    <span id="checkNameInfo" style="display: none"><i class="fa fa-check-circle fa-lg check-success" aria-hidden="true"></i>用户名可用</span>
+                    <span id="checkNameInfo2" style="display:none;"><i class="fa fa-times fa-lg check-success" aria-hidden="true"></i>用户名已经被注册</span>
+                </div>
+
+                <!--密码-->
+                <div class="form-group">
+                    <label for="registerPassword" class="col-sm-2 control-label">密码</label>
+                    <div class="col-sm-6 col-sm-6">
+                        <input type="password" class="form-control" id="registerPassword"
+                               onblur="checkRegisterPassword()"
+                               placeholder="6到16位(需同时包含字母、数字、特殊符号)">
+                    </div>
+                    <span id="checkPasswordInfo" style="display: none"><i class="fa fa-check-circle fa-lg check-success" aria-hidden="true"></i>密码格式正确</span>
+                </div>
+
+                <!--图形验证-->
+                <div class="form-group">
+                    <label for="registerImgCheckCode" class="col-lg-2 col-sm-2 control-label">人机验证</label>
+                    <div class="col-lg-4 col-sm-4">
+                        <input type="text" class="form-control" id="registerImgCheckCode"
+                               onblur="checkRegisterImgCode()" placeholder="图形验证码">
+                    </div>
+                    <!--验证码图片显示-->
+                    <div class="col-lg-2 col-sm-2">
+                        <img id="codeImg" src="/register/getImgCode" onclick="changeImg()" onload="getCodeNow()"
+                             alt="验证码图片加载失败" class="img-rounded">
+                    </div>
+                    <!--提示信息-->
+                    <span id="checkImgCode" style="display: none"><i class="fa fa-check-circle fa-lg check-success" aria-hidden="true"></i>图形验证码输入正确</span>
+                    <span id="checkImgCode2" style="display: none"><i class="fa fa-times fa-lg check-success" aria-hidden="true"></i>图形验证码输入错误</span>
+                    <!--隐藏的span显示值是code-->
+                    <span style="display: none" id="receivedImgCode"></span>
+                </div>
+                <!--手机-->
+                <div class="form-group">
+                    <label for="registerTel" class="col-lg-2 col-sm-2 control-label">手机</label>
+                    <div class="col-lg-4 col-sm-4">
+                        <input type="text" class="form-control" id="registerTel" placeholder="11位手机号"
+                               onblur="checkRegisterTel()">
+                    </div>
+                    <div class="col-lg-2 col-sm-2">
+                        <button type="button" class="btn btn-info" id="sendCodeBtn" onclick="clickSendTelCode()">发送验证码
+                        </button>
+                    </div>
+                    <span id="checkTel" style="display: none"><i class="fa fa-times fa-lg" style=" margin: 10px 0px 0px 5px;" aria-hidden="true"></i>该手机号已经被注册</span>
+                </div>
+
+                <!--手机验证码-->
+                <div class="form-group">
+                    <label for="registerTelCheckCode" class="col-lg-2 col-sm-2 control-label">验证码</label>
+                    <div class="col-lg-4 col-sm-8">
+                        <input type="text" class="form-control" id="registerTelCheckCode"
+                               placeholder="6位验证码" onblur="checkRegisterTelCode()">
+                    </div>
+                    <span id="checkTelBackCode" style="display: none"><i class="fa fa-check-circle fa-lg check-success" aria-hidden="true"></i>验证码正确</span>
+                    <span id="checkTelBackCode2" style="display: none"><i class="fa fa-times fa-lg check-success" aria-hidden="true"></i>验证码不正确</span>
+                    <!--隐藏的span显示值是code-->
+                    <span style="display: none" id="receivedCode">-1</span>
+                </div>
+                <!--注册按钮-->
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <!--ajax请求 不触发表单提交-->
+                        <!--  <button type="submit" class="btn btn-success">注册</button>-->
+                        <button type="button" class="btn btn-success" onclick="registerUserByBtn()">注册</button>
+                    </div>
+                </div>
+                <!--提交前检查数据-->
+            </form>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

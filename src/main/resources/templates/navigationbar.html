@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<body th:fragment="nav">
+<nav class="navbar navbar-default col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
+    <div class="container-fluid col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <!--羊羊社区的图标-->
+        <div class="navbar-header col-lg-1 col-md-1 hidden-sm hidden-xs">
+            <a class="navbar-brand" href="/">
+                <!--写绝对路径 有的网页是二级目录也要引用此处-->
+                <img alt="Brand" src="../img/icon/name_icon.png"
+                     style="width:80px;height:40px;margin: -10px 0 0 -15px;">
+            </a>
+        </div>
+
+        <!--发现/搜索部分-->
+        <div class="collapse navbar-collapse col-lg-5 col-md-5 hidden-sm hidden-xs">
+            <!--无序列表1-->
+            <ul class="nav navbar-nav">
+                <!--class="active"-->
+                <li><a href="/">首页<span class="sr-only">(current)</span></a></li>
+                <li><a href="#">发现</a></li>
+            </ul>
+            <!--搜索框部分-->
+            <form class="navbar-form navbar-left" action="/">
+                <div class="form-group">
+                    <input  name="keyWord" type="text" class="form-control" placeholder="多个关键词使用空格分隔">
+                </div>
+                <button type="submit" class="btn btn-default">搜索</button>
+            </form>
+        </div>
+
+        <!--个人中心部分-->
+        <div class="collapse navbar-collapse col-lg-5 col-md-5 col-sm-12 col-xs-12" style="float: right">
+            <ul class="nav navbar-nav navbar-right" th:if="${session.user == null}">
+                <li><a href="/login" style="color: blue">登录</a></li>
+            </ul>
+            <!--若登录成功 个人信息展示-->
+            <ul class="nav navbar-nav navbar-right" th:if="${session.user != null}">
+                <!--                <li><span class="glyphicon glyphicon-bell" style=" font-size: 20px;margin-top: 20px;" aria-hidden="true" th:text="666"></span>-->
+                <!--                </li>-->
+                <li><a href="/center/myNotice"><span id="unReadNum1" class="glyphicon glyphicon-bell" aria-hidden="true" th:text="${session.unReadNumber}"></span></a></li>
+                <li><a href="/askQuestion">提问</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">
+                        <span><img th:src="${session.user.avatar}" alt="用户头像"
+                                   class="img-rounded" style="width: 30px;height: 30px;"></span>
+                        <span th:text="${session.user.nickname}"></span>
+                        <span class="caret"><!--这个span是名字后面那个小箭头的样式--></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/center/myInformation">我的资料</a></li>
+                        <li><a href="/center/myQuestion">我的问题</a></li>
+                        <li><a href="/center/myNotice">我的消息<span id="unReadNum2" style="float: right" th:text="${session.unReadNumber}"></span></a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="/logout">退出登录</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+</body>
+</html>

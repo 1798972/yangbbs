@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="img/icon/web_icon.ico" type="image/x-icon"/>
+    <title>羊羊社区--登录页面</title>
+    <script src="js/jquery-3.4.1.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="application/javascript"></script>
+    <script src="js/myjs/login.js" type="application/javascript"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/mycss/login.css">
+</head>
+
+<body style=" background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1576266436568&di=6a43559783c1dd3d799ed020efe4ba4f&imgtype=jpg&src=http%3A%2F%2Fimg2.imgtn.bdimg.com%2Fit%2Fu%3D2975696492%2C4243470135%26fm%3D214%26gp%3D0.jpg) no-repeat center center fixed; background-size: 100%;">
+<!--边框1-->
+<div class="col-lg-2 col-md-2 col-sm-0 col-xs-0"></div>
+
+<!--中间的区域用于显示-->
+<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12" style="margin: 80px 0;">
+    <div style="text-align: center">
+        <div class="page-header">
+            <h1>羊羊社区<small>登录页面</small></h1>
+        </div>
+
+        <!--登录区域-->
+        <div style="text-align: center">
+            <div class="input-group input-group-lg input-login">
+                <span class="input-group-addon">用户名</span>
+                <input type="text" class="form-control" placeholder="Username" id="login_username">
+                <!--清除小图标元素-->
+                <span class="glyphicon glyphicon-remove-circle form-control-feedback-my"
+                      onclick="removeUserName()"></span>
+            </div>
+            <br>
+            <br>
+            <!--密码框-->
+            <div class="input-group input-group-lg input-login password-eye-div">
+                <span class="input-group-addon">密&nbsp;&nbsp;&nbsp;&nbsp;码</span>
+                <input id="user-add-password" type="password" class="form-control" placeholder="Password">
+                <!--小图标元素-->
+                <!--按下显示 松开隐藏-->
+                <span class="glyphicon glyphicon-eye-close form-control-feedback-my password-eye-span"
+                      onmousedown="userPasswordEye('user-add-password', 'onmousedown')"
+                      onmouseup="userPasswordEye('user-add-password', 'onmouseup')">
+                </span>
+            </div>
+            <br>
+            <br>
+            <!--验证码-->
+            <div class="input-group input-group-lg input-login">
+                <span class="input-group-addon">验证码</span>
+                <input type="text" class="form-control" placeholder="Verification Code" id="login_verificationcode">
+                <span class="glyphicon glyphicon-remove-circle form-control-feedback-my"
+                      onclick="removeVerificationCode()"></span>
+            </div>
+            <br>
+            <img id="codeImg" src="/getyanzheng" onclick="changeImg()" alt="验证码图片加载失败" class="img-rounded">
+        </div>
+        <br>
+        <!--登录按钮-->
+        <div class="input-login ">
+            <button type="button" style="width: 150px;" class="btn btn-success"><span>登录</span></button>
+            &nbsp;&nbsp;
+            <span style="font-size: 17px"><b><a href="#">找回密码</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">注册</a></b></span>
+        </div>
+        <!--第三方登录-->
+        <hr>
+        <div>
+            <h4><span style="color:black">社交账号登录</span></h4>
+            <span>
+                <div>
+                    <!--QQ登录-->
+                    <a href="
+https://graph.qq.com/oauth2.0/authorize?response_type=code&client_id=101838917&redirect_uri=http://www.yang37.cn/qqcallback&state=1">
+                        <img src="img/qqLoginIcon.png" alt="图片加载失败" class="img-rounded" style="width: 50px">
+                    </a>
+                    <!--GitHub登录-->
+                    <a>
+                    <img src="img/githubLoginIcon.png" alt="图片加载失败" class="img-rounded" style="width: 50px;margin-left: 20px;">
+                    </a>
+                </div>
+            </span>
+        </div>
+    </div>
+</div>
+
+<!--边框2-->
+<div class="col-lg-2 col-md-2 col-sm-0 col-xs-0"></div>
+</body>
+</html>

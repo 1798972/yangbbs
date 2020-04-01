@@ -1,0 +1,30 @@
+/*类选择器以.开头  引用时直接写class="aaa bbb" 不同类用空格分隔*/
+.input-login{
+    margin: 0 200px;
+}
+
+.form-control-feedback-my{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    display: block;
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.password-eye-div {
+    position: relative;
+}
+
+.password-eye-span {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    color: #ccc;
+}
