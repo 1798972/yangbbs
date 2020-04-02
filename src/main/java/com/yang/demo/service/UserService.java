@@ -79,7 +79,7 @@ public class UserService {
         User tempUser = new User();
         String token = UUID.randomUUID().toString();
         //这个头像是必填的字段 那我用我的
-        String adminAvatarUrl = userMapper.findAdminAvatar(3);
+        String adminAvatarUrl = userMapper.findAdminAvatar(1);
         tempUser.setLoginName(registerUserDTO.getUsername());
         tempUser.setNickname("一个没有昵称的人");
         tempUser.setAvatar(adminAvatarUrl);

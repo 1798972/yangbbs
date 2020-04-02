@@ -47,6 +47,7 @@ public class QuestionDetailsController {
         QuestionDetailsDTO questionDetailsDTO = questionService.findQuestionDetails(questionId);
         List<AboutQuestionDTO> aboutQuestionDTOList = questionService.findAboutQuestionList(questionId);
 
+
         model.addAttribute("questionDetailsDTO", questionDetailsDTO);
         model.addAttribute("aboutQuestionDTOList",aboutQuestionDTOList);
         return "questiondetails";

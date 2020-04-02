@@ -10,6 +10,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  * @Author Yiang37
  * @Date 2020/3/5 0:34
  * Description:
+ *  拦截器 区分过滤器 这个拦截器是拦截指定请求 然后可以有选择的做了操作再放行
  * 拦截器的配置，主要配置项就两个，一个是指定拦截器，第二个是指定拦截的URL
  * 注解！！！！
  */

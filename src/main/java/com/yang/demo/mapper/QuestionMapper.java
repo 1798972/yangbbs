@@ -62,4 +62,7 @@ public interface QuestionMapper {
     //搜索时查找到的问题列表
     @Select("select * from questions where title regexp #{search} order by id desc limit ${offset},${size} ")
     List<Question> findQuestionQueryList(@Param("offset")String offset,@Param("size") String size, @Param("search") String search);
+
+    @Update("update questions set view_count = view_count + 1 where id = #{questionId}")
+    void increaseOneViewCount(String questionId);
 }

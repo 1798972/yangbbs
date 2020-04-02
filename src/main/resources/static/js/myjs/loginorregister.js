@@ -194,7 +194,7 @@ function checkRegisterTel() {
 }
 
 //发送按钮的js事件 验证码倒计时
-var countdown = 5;
+var countdown = 60;
 var infoNum = 0;
 
 function clickSendTelCode() {
@@ -233,7 +233,7 @@ function settime(obj) { //发送验证码倒计时
         obj.attr('disabled', false);
         obj.html("发送验证码");
         //重新赋值
-        countdown = 5;
+        countdown = 60;
         return;
     } else {
         //点击发送后 显示重新发送时间

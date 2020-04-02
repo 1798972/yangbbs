@@ -112,11 +112,17 @@ public class QuestionService {
         if (dbQuestion == null){
             throw new CustomizeException(CustomizeErrorCode.QUESRION_NOT_EXIST);
         }
-        User dbUser = userMapper.findUserById(dbQuestion.getUserId());
+        //问题的浏览数+1
+        questionMapper.increaseOneViewCount(questionId);
+        //浏览数增加后再次查询改问题
+        dbQuestion = questionMapper.findQuestionByQuestionId(questionId);
 
+        User dbUser = userMapper.findUserById(dbQuestion.getUserId());
         QuestionDetailsDTO questionDetailsDTO = new QuestionDetailsDTO();
+
         questionDetailsDTO.setQuestion(dbQuestion);
         questionDetailsDTO.setUser(dbUser);
+
 
         return questionDetailsDTO;
     }

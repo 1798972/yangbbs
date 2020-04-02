@@ -5,7 +5,7 @@
 <nav class="navbar navbar-default col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
     <div class="container-fluid col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <!--羊羊社区的图标-->
-        <div class="navbar-header col-lg-1 col-md-1 hidden-sm hidden-xs">
+        <div class="navbar-header col-lg-1 col-md-1 col-sm-1 col-xs-1">
             <a class="navbar-brand" href="/">
                 <!--写绝对路径 有的网页是二级目录也要引用此处-->
                 <img alt="Brand" src="../img/icon/name_icon.png"
@@ -31,7 +31,8 @@
         </div>
 
         <!--个人中心部分-->
-        <div class="collapse navbar-collapse col-lg-5 col-md-5 col-sm-12 col-xs-12" style="float: right">
+        <!--collapse navbar-collapse-->
+        <div class="  col-md-5 col-sm-11 col-xs-12" style="float: right">
             <ul class="nav navbar-nav navbar-right" th:if="${session.user == null}">
                 <li><a href="/login" style="color: blue">登录</a></li>
             </ul>
