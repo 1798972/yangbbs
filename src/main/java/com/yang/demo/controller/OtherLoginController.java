@@ -70,6 +70,7 @@ public class OtherLoginController {
         qqAccessTokenDTO.setAppKey(qqAppKey);
         qqAccessTokenDTO.setRedirectURI(qqRedirectURI);
         qqAccessTokenDTO.setCode(code);
+
         //2.1利用返回的code值  FD190E1C0EE4C6897D7040E52AF1CEDA  //获取token
         String qqToken = qqProvider.getQQToken(qqAccessTokenDTO);
         //2.2 利用返回的token值 获取OpenID
@@ -84,6 +85,7 @@ public class OtherLoginController {
             String token = UUID.randomUUID().toString();
             UserAuth tempUserAuth = new UserAuth();
             User tempUser = new User();
+
             tempUser.setAvatar(qqUserDTO.getFigureurlQQ1());
             tempUser.setNickname(qqUserDTO.getNickname());
             tempUser.setToken(token);

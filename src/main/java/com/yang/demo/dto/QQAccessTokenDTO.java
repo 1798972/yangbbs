@@ -12,6 +12,7 @@ import lombok.Data;
  * redirect_uri= redirectURI
  * code = code
  */
+
 @Data
 public class QQAccessTokenDTO {
     private String appId;
