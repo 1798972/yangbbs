@@ -9,6 +9,7 @@ import com.yang.demo.provider.QCloudProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
@@ -16,6 +17,7 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.io.IOException;
+import java.util.Objects;
 
 /**
  * @Author Yiang37
@@ -70,4 +72,38 @@ public class FileController {
             return null;
         }
     }
+
+    @ResponseBody
+    @PostMapping("/file/uploadAvator")
+    public JSONObject uploadAvator(@RequestParam MultipartFile file) throws Exception {
+        if (file == null){
+            JSONObject jsonObject = new JSONObject();
+            jsonObject.put("state", 0);
+            jsonObject.put("des","不能上传空文件");
+            jsonObject.put("url", "");
+            return jsonObject;
+        }
+
+        //临时生成一个File 接收即转为File类型
+        File targetFile = FileProvider.multipartFileToFile(file);
+        //上传操作 返回图片url
+        String url = qCloudProvider.upload(targetFile, Objects.requireNonNull(file.getOriginalFilename()));
+        //删除临时的file
+        FileProvider.delteTempFile(targetFile) ;
+
+        if (url != null){
+            JSONObject jsonObject = new JSONObject();
+            jsonObject.put("state", 1);
+            jsonObject.put("des","上传成功");
+            jsonObject.put("url", url);
+            return jsonObject;
+        }else {
+            JSONObject jsonObject = new JSONObject();
+            jsonObject.put("state", 0);
+            jsonObject.put("des","上传至文件服务器失败");
+            jsonObject.put("url","");
+            return jsonObject;
+        }
+    }
+
 }

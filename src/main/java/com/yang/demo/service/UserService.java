@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.servlet.http.Cookie;
+import java.util.List;
 import java.util.UUID;
 
 /**
@@ -170,5 +171,25 @@ public class UserService {
 
         myInfomationDTO.setGmtCreate(dbUser.getGmtCreate());
         return myInfomationDTO;
+    }
+
+    //根据用户id查找用户类型
+    public int findUserTypeById(String userId) {
+        List<Integer> typeList = userMapper.findUserTypeById(userId);
+
+        //目前只有网站原生用户需要更改资料 所以有的话返回0 没有返回-1
+        for (Integer type : typeList) {
+            if (type == 0){
+                return 0;
+            }
+        }
+        return -1;
+
+    }
+
+    //更新一个用户的信息
+    public int changeOneUserInfo(String id, String newNickname, String newAvaUrl) {
+        int row = userMapper.updateOneUserNicknameAndAvator(id,newNickname,newAvaUrl);
+        return row;
     }
 }

@@ -18,7 +18,17 @@
     <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
 </head>
 
+
+
 <body onload="getCodeNow()">
+<div id="findPasswordFrame" style="display: none">
+    <b>收取验证码功能在注册界面有实现.</b><br>
+    <br>
+    <b>短信服务都好贵,找回密码就不做了.</b><br>
+    <br>
+    <b>或者你也可以联系QQ1798972修改.</b>
+</div>
+
 <!--大小6格 从3开始 即3 6 3-->
 <button type="button" class="btn btn-info"><a style="color: black" href="/" th:text="返回首页"></a></button>
 <div class="col-lg-6 col-lg-offset-3 col-md-12 col-sm-12 col-xs-12 login-all">
@@ -108,7 +118,7 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <b class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-xs-offset-3">记不住密码？
-                        <a href="#" style="color: #00FF00">点此找回</a></b>
+                        <a href="#" onclick="findPassword()" style="color: #00FF00">点此找回</a></b>
                 </div>
 
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">

@@ -78,6 +78,7 @@ function loginUserByBtn(){
                  if (data === "success"){
                      //登录成功跳转至主页
                      $(location).prop('href',"/");
+                     //index.html中checkIframe()判断是否需要关闭页面
                  }else {
                      layer.msg('用户名/密码错误,请检查！');
                      return false;
@@ -89,4 +90,14 @@ function loginUserByBtn(){
          });
          return false;
      }
+}
+
+//找回密码
+function findPassword() {
+    layer.open({
+        type: 1,
+        skin: 'layui-layer-rim', //加上边框
+        area: ['420px', '240px'], //宽高
+        content: $("#findPasswordFrame")
+    });
 }

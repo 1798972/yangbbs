@@ -1,10 +1,9 @@
 package com.yang.demo.mapper;
 
 import com.yang.demo.model.User;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Update;
+import org.apache.ibatis.annotations.*;
+
+import java.util.List;
 
 @Mapper
 public interface UserMapper {
@@ -40,4 +39,12 @@ public interface UserMapper {
     //8.根据用户id 查找用户名字
     @Select("select nickname from users where id = #{userId}")
     String findUserNameByUserId(Integer userId);
+
+    //9.根据用户Id查询用户类型
+    @Select("SELECT utype FROM user_auths WHERE user_id = #{userId};")
+    List<Integer> findUserTypeById(String userId);
+
+    //10.更新一个用户信息
+    @Update("UPDATE users SET nickname = #{newNickname} ,avatar = #{newAvaUrl}  WHERE id = #{id}")
+    int updateOneUserNicknameAndAvator(@Param("id") String id, @Param("newNickname") String newNickname, @Param("newAvaUrl") String newAvaUrl);
 }

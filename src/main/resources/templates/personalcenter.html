@@ -20,9 +20,18 @@
     <link rel="stylesheet" href="/css/mycss/all.css">
     <link rel="stylesheet" href="/css/mycss/personalcenter.css">
     <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/layui/css/layui.css" media="all">
     <!--js+bt-->
 </head>
+
+
 <body>
+<!--提示信息-->
+<ul class="layer_notice layui-layer-wrap" style="display: none;background: lavender;border-radius: 10px;">
+    <li><b>1.检测到您是采用第三方方式登录的网站。</b></li>
+    <br>
+    <li><b>2.您无需编辑信息,社区信息会自动与其同步。</b></li>
+</ul>
 <!--导航栏-->
 <div id="navigation" class="col-lg-12" th:insert="navigationbar :: nav"></div>
 
@@ -32,19 +41,21 @@
     <div class="col-lg-6 col-lg-offset-2 login-all">
         <!--我的资料-->
         <div id="myInformation" th:if="${action == 'myInformation'}">
+            <span id="userIdSpan" style="display: none" th:text="${myInfomationDTO.id}"></span>
             <div class="panel panel-default">
                 <div class="panel-body" style="text-align: center">
                     个人资料
                 </div>
             </div>
-            <div class="myInformation">
+
+            <div id="preDiv" class="col-lg-12 myInformation">
                 <b><span>头像:</span></b>
-                <br><img th:src="${myInfomationDTO.avatar}" alt="..." class="img-thumbnail"><br>
+                <br><img th:src="${myInfomationDTO.avatar}" alt="..." class="center-avatar img-thumbnail"><br>
                 <br>
                 <b><span>昵称:</span></b>
                 <h5 th:text="${myInfomationDTO.nickname}"></h5><br>
 
-                <b><span>羊羊号:</span></b>
+                <b><span>羊羊账户:</span></b>
                 <h5 th:text="${myInfomationDTO.yyNumber}"></h5><br>
 
                 <b><span>手机号:</span></b>
@@ -59,7 +70,68 @@
                 <b><span>注册时间:</span></b>
                 <h5 th:text="${#dates.format(myInfomationDTO.gmtCreate,'yyyy年MM月dd日')}"></h5><br>
 
+                <button id="changeInformationBtn" onclick="changeInformation()" style="margin-bottom: 10px"
+                        type="button" class="layui-btn layui-btn-warm">编辑资料
+                </button>
             </div>
+
+            <div id="nextDiv" style="display: none" class="col-lg-6 myInformation">
+                <div class="col-lg-6">
+                    <b><span>新头像:</span></b><br>
+                    <img id="newAvator" th:src="${myInfomationDTO.avatar}" alt="..."
+                         class="center-avatar img-thumbnail">
+                    <span id="newAvatarUrl" style="display: none" th:text="${myInfomationDTO.avatar}"></span>
+                </div>
+                <div class="col-lg-6">
+                    <button id="uploadAvatar" style="margin: 13px 0px 0px -90px;" type="button"
+                            class="layui-btn  layui-btn-normal">
+                        <i class="layui-icon">&#xe67c;</i>点击上传
+                    </button>
+                </div>
+
+
+                <div class="col-lg-12" style="margin: 90px 0px;">
+                    <b><span>新昵称:</span></b><br>
+                    <!--onblur="checkNewName()" 提交的时候检测就好了 不然太频繁-->
+                    <input id="newNickname" type="text" name="title" required lay-verify="required" placeholder="不超过8个字符"
+                           autocomplete="off" class="layui-input">
+                </div>
+
+                <div class="col-lg-12" style="margin: 0 0px 50px 90px;">
+                    <button onclick="submitChangeInfo()" type="button" class="layui-btn">保存</button>
+                    <button onclick="cancelChange()" type="button" class="layui-btn  layui-btn-primary">取消</button>
+                </div>
+
+            </div>
+
+            <script src="/layui/layui.all.js"></script>
+            <script>
+
+                layui.use('upload', function () {
+                    var upload = layui.upload;
+                    //执行实例
+                    var uploadInst = upload.render({
+                        elem: '#uploadAvatar' //绑定元素
+                        , url: '/file/uploadAvator' //上传接口
+                        // ,accept: 'file' //允许上传的文件类型
+                        , size: 10 * 1024 //最大允许上传的文件大小
+                        //,……
+                        , done: function (res) {
+                            //上传成功
+                            if (res.state === 1) {
+                                console.log(res.url);
+                                $("#newAvator").attr('src', res.url);
+                                $("#newAvatarUrl").text(res.url);
+                            }
+                        }
+                        , error: function () {
+                            //请求异常回调
+                        }
+                    });
+                });
+
+            </script>
+
         </div>
 
         <!--我的问题-->
@@ -137,12 +209,14 @@
                     <td class="question-list-title">
                         <i class="fa fa-envelope-o" aria-hidden="true"></i>
                         <a th:text="${notice.creatorName}"></a>
-                        <span >评论了你的</span>
+                        <span>评论了你的</span>
                         <b><span th:if="${#strings.containsIgnoreCase(notice.ntype,'1')}" style="color: rebeccapurple">评论:</span></b>
-                        <b><span th:if="${#strings.containsIgnoreCase(notice.ntype,'0')}" style="color: #eb9316">问题:</span></b>
+                        <b><span th:if="${#strings.containsIgnoreCase(notice.ntype,'0')}"
+                                 style="color: #eb9316">问题:</span></b>
 
                         <!--先经过读取操作-->
-                        <a th:href="@{/noticeToQuestion(noticeId=${notice.id},clickId=${notice.clickId})}" th:utext="${#strings.abbreviate(notice.outerTitle,10)}"></a>
+                        <a th:href="@{/noticeToQuestion(noticeId=${notice.id},clickId=${notice.clickId})}"
+                           th:utext="${#strings.abbreviate(notice.outerTitle,10)}"></a>
 
                         <span class="label label-danger" th:if="${notice.nstate} == 1">未读</span>
                     </td>
@@ -219,6 +293,7 @@
 
 </body>
 </html>
+<!--
 
 <script>
     var personal = new Vue({
@@ -233,4 +308,4 @@
             }
         }
     });
-</script>
+</script>-->

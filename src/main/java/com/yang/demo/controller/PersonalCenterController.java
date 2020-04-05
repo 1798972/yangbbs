@@ -32,37 +32,37 @@ public class PersonalCenterController {
     private NoticeService noticeService;
 
     @GetMapping("/center/{action}")
-    public String myQuestions(@PathVariable("action")String action,
-                              @RequestParam(name = "page", defaultValue = "1",required = false) String page,
-                              @RequestParam(name = "size", defaultValue = "10",required = false) String size,
+    public String myQuestions(@PathVariable("action") String action,
+                              @RequestParam(name = "page", defaultValue = "1", required = false) String page,
+                              @RequestParam(name = "size", defaultValue = "10", required = false) String size,
                               HttpServletRequest request,
-                              Model model){
+                              Model model) {
 
-        User sessionUser = (User)request.getSession().getAttribute("user");
+        User sessionUser = (User) request.getSession().getAttribute("user");
         //我的资料
-        if ("myInformation".equals(action)){
+        if ("myInformation".equals(action)) {
             MyInfomationDTO myInfomationDTO = userService.findUserInfomationByUerId(sessionUser.getId());
 
-            model.addAttribute("myInfomationDTO",myInfomationDTO);
-            model.addAttribute("action","myInformation");
+            model.addAttribute("myInfomationDTO", myInfomationDTO);
+            model.addAttribute("action", "myInformation");
 
             return "personalcenter";
         }
         //我的问题
-        if ("myQuestion".equals(action)){
+        if ("myQuestion".equals(action)) {
             //根据页码 与 大小 获取页面对象 即 问题+分页列表
-            MyQuestionAndPageDTO myQuestionAndPageDTOList = questionService.findMyQuestionsAndPage(page, size,sessionUser.getId());
+            MyQuestionAndPageDTO myQuestionAndPageDTOList = questionService.findMyQuestionsAndPage(page, size, sessionUser.getId());
 
-            model.addAttribute("myQuestionAndPageDTOList",myQuestionAndPageDTOList);
-            model.addAttribute("action","myQuestion");
+            model.addAttribute("myQuestionAndPageDTOList", myQuestionAndPageDTOList);
+            model.addAttribute("action", "myQuestion");
             return "personalcenter";
         }
         //我的通知
-        if ("myNotice".equals(action)){
+        if ("myNotice".equals(action)) {
 
-            MyNoticeAndPageDTO myNoticeAndPageDTO = noticeService.findMyNoticesAndPage(page, size,sessionUser.getId());
-            model.addAttribute("myNoticeAndPageDTO",myNoticeAndPageDTO);
-            model.addAttribute("action","myNotice");
+            MyNoticeAndPageDTO myNoticeAndPageDTO = noticeService.findMyNoticesAndPage(page, size, sessionUser.getId());
+            model.addAttribute("myNoticeAndPageDTO", myNoticeAndPageDTO);
+            model.addAttribute("action", "myNotice");
             return "personalcenter";
         }
 
@@ -82,5 +82,29 @@ public class PersonalCenterController {
         out.setMaxAge(0);
         response.addCookie(out);
         return "redirect:/";
+    }
+
+    //获取用户类型
+    @PostMapping("/getUserType")
+    @ResponseBody
+    public int getUserType(@RequestParam("id") String userId) {
+        int type = userService.findUserTypeById(userId);
+        return type;
+    }
+
+    //更改用户资料
+    @PostMapping("/changeUserInfo")
+    @ResponseBody
+    public String changeUserInfo(@RequestParam("id") String id,
+                                 @RequestParam("newNickname") String newNickname,
+                                 @RequestParam("newAvaUrl") String newAvaUrl
+                                 ) {
+
+        int flag = userService.changeOneUserInfo(id,newNickname,newAvaUrl);
+        if (flag == 1){
+        return "ok";
+        }else {
+            return "error";
+        }
     }
 }
