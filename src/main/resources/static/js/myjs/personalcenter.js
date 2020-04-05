@@ -24,7 +24,7 @@ function changeInformation() {
             } else {
 
                 //无需更改资料
-                layer.open({
+               /* layer.open({
                     type: 1,
                     shade: false,
                     title: false, //不显示标题
@@ -33,7 +33,9 @@ function changeInformation() {
                     // cancel: function(){
                     //     layer.msg('捕获就是从页面已经存在的元素上，包裹layer的结构', {time: 5000, icon:6});
                     // }
-                });
+                });*/
+                layer.msg('您采用第三方登录,无需修改信息,信息会自动同步.');
+
             }
         },
         error: function () {
