@@ -35,7 +35,6 @@ function changeInformation() {
                     // }
                 });*/
                 layer.msg('您采用第三方登录,无需修改信息,信息会自动同步.');
-
             }
         },
         error: function () {
