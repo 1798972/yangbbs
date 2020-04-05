@@ -39,7 +39,7 @@ public class ImageCoedProvider {
         //1.得到一个画布
         Graphics g = bi.getGraphics();
         //2.添加背景颜色
-        g.setColor(Color.ORANGE);
+        g.setColor(Color.LIGHT_GRAY);
         g.fillRect(0, 0, 70, 30);
 
         //3.添加干扰线
@@ -61,7 +61,7 @@ public class ImageCoedProvider {
 
         //3.添加文字
         g.setColor(Color.BLACK);
-        g.setFont(new Font("宋体", Font.BOLD, 25));
+        g.setFont(new Font("宋体", Font.BOLD, 20));
 
         String str = getCode();
         //4.将文字填充到画板中

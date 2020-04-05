@@ -86,15 +86,34 @@
         editor.customConfig.uploadImgMaxSize = 20 * 1024 * 1024;
         // 限制 一次最多上传50张图片
         editor.customConfig.uploadImgMaxLength = 50;
-        // 将 timeout 时间改为 5s
-        editor.customConfig.uploadImgTimeout = 5000;
+        // 将 timeout 时间改为 60s
+        editor.customConfig.uploadImgTimeout = 60 * 1000;
         // 自定义文件名
         editor.customConfig.uploadFileName = 'editor_img';
         //配置编辑区域的 z-index
         editor.customConfig.zIndex = 100;
+        // 隐藏“网络图片”tab
+        editor.customConfig.showLinkImg = false;
+
+        /*插入链接时，可通过如下配置对文字和链接进行校验*/
+        editor.customConfig.linkCheck = function (text, link) {
+            // console.log(text); // 插入的文字
+            // console.log(link); // 插入的链接
+            if (text ==="" || text ===null){
+                return '链接名字不能为空!';
+            }
+            var http = /^http:\/\/.*/i.test(link);
+            var https = /^https:\/\/.*/i.test(link);
+
+            if (!http && !https) {
+                return '链接必须以http://或者https://开头!';
+            }else {
+                return true // 返回 true 表示校验成功
+            }
+            // return '验证失败' // 返回字符串，即校验失败的提示信息
+        };
 
         /*上传图片相关操作*/
-
         editor.customConfig.uploadImgHooks = {
             before: function (xhr, editor, files) {
                 // 图片上传之前触发
@@ -147,8 +166,23 @@
 
             //内容
             //存的只是简单的文本  var description = editor.txt.text();
+            var descriptionNone = editor.txt.text();
             //存的是带html样式的文本
+            //肯定有<br>所以不是验证它而是上面的.txt.text();
             var description = editor.txt.html();
+            //去掉&nbsp
+            var removeNbsp = descriptionNone.replace(/&nbsp;/ig, "").replace(" ", "");
+            // //去掉中文还是英文的空格
+            // var removeNbsp2 = descriptionNone.replace(" ","");
+/*            console.log("__________________");
+            console.log(description);
+            console.log(descriptionNone);
+            console.log(removeNbsp);
+            if (descriptionNone === "" || descriptionNone === null || removeNbsp === "") {
+                console.log("空格!");
+            }else {
+                console.log("没有空格")
+            }*/
 
             //标签
             var tag = $("#tag_input").val();
@@ -157,9 +191,9 @@
             if (title === "" || title === null) {
                 $("#question_info").show();
                 $("#question_error").html("<b>问题</b>不能为空!");
-            } else if (description === "" || description === null) {
+            } else if (descriptionNone === "" || descriptionNone === null || removeNbsp === "" || removeNbsp === null) {
                 $("#question_info").show();
-                $("#question_error").html("<b>内容</b>不能为空!");
+                $("#question_error").html("<b>内容</b>不能为空/图片得有<b>描述</b>");
             } else if (tag === "" || tag === null) {
                 $("#question_info").show();
                 $("#question_error").html("<b>标签</b>不能为空!");

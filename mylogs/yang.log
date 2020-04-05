@@ -1335,3 +1335,719 @@ Caused by: java.lang.ArrayIndexOutOfBoundsException: 6
 2020-04-05 14:47:59.715  INFO 8040 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7 (http) with context path ''
 2020-04-05 14:47:59.716  INFO 8040 --- [restartedMain] com.yang.demo.YangbbsApplication         : Started YangbbsApplication in 1.099 seconds (JVM running for 162.631)
 2020-04-05 14:47:59.717  INFO 8040 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-04-05 20:17:50.177  INFO 12356 --- [restartedMain] com.yang.demo.YangbbsApplication         : Starting YangbbsApplication on DESKTOP-G9DDVR8 with PID 12356 (E:\yangidea\yangbbs\target\classes started by Yiang37 in E:\yangidea\yangbbs)
+2020-04-05 20:17:50.185  INFO 12356 --- [restartedMain] com.yang.demo.YangbbsApplication         : No active profile set, falling back to default profiles: default
+2020-04-05 20:17:50.298  INFO 12356 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-04-05 20:17:50.298  INFO 12356 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-04-05 20:17:51.527  INFO 12356 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-05 20:17:51.530  INFO 12356 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-04-05 20:17:51.571  INFO 12356 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16ms. Found 0 Redis repository interfaces.
+2020-04-05 20:17:52.025  INFO 12356 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-05 20:17:52.580  INFO 12356 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7 (http)
+2020-04-05 20:17:52.591  INFO 12356 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-05 20:17:52.592  INFO 12356 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-04-05 20:17:52.708  INFO 12356 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-05 20:17:52.709  INFO 12356 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2411 ms
+2020-04-05 20:17:53.793  INFO 12356 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-05 20:17:53.889  INFO 12356 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-05 20:17:54.393  INFO 12356 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-05 20:17:54.580  INFO 12356 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7 (http) with context path ''
+2020-04-05 20:17:54.584  INFO 12356 --- [restartedMain] com.yang.demo.YangbbsApplication         : Started YangbbsApplication in 5.563 seconds (JVM running for 7.777)
+2020-04-05 20:19:02.287  INFO 10056 --- [restartedMain] com.yang.demo.YangbbsApplication         : Starting YangbbsApplication on DESKTOP-G9DDVR8 with PID 10056 (E:\yangidea\yangbbs\target\classes started by Yiang37 in E:\yangidea\yangbbs)
+2020-04-05 20:19:02.292  INFO 10056 --- [restartedMain] com.yang.demo.YangbbsApplication         : No active profile set, falling back to default profiles: default
+2020-04-05 20:19:02.357  INFO 10056 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-04-05 20:19:02.357  INFO 10056 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-04-05 20:19:03.480  INFO 10056 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-05 20:19:03.485  INFO 10056 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-04-05 20:19:03.517  INFO 10056 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14ms. Found 0 Redis repository interfaces.
+2020-04-05 20:19:04.032  INFO 10056 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-05 20:19:04.742  INFO 10056 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2020-04-05 20:19:04.756  INFO 10056 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-05 20:19:04.757  INFO 10056 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-04-05 20:19:04.889  INFO 10056 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-05 20:19:04.889  INFO 10056 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2531 ms
+2020-04-05 20:19:06.115  INFO 10056 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-05 20:19:06.201  INFO 10056 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-05 20:19:06.832  INFO 10056 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-05 20:19:07.092  INFO 10056 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2020-04-05 20:19:07.099  INFO 10056 --- [restartedMain] com.yang.demo.YangbbsApplication         : Started YangbbsApplication in 5.276 seconds (JVM running for 6.342)
+2020-04-05 20:19:07.167  INFO 10056 --- [http-nio-7979-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-05 20:19:07.167  INFO 10056 --- [http-nio-7979-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-05 20:19:07.182  INFO 10056 --- [http-nio-7979-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2020-04-05 20:19:07.249  INFO 10056 --- [http-nio-7979-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-05 20:19:08.182  INFO 10056 --- [http-nio-7979-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-05 20:19:12.848  INFO 10056 --- [http-nio-7979-exec-6] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-04-05 20:19:12.850  INFO 10056 --- [http-nio-7979-exec-6] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-04-05 20:24:58.918  INFO 12876 --- [restartedMain] com.yang.demo.YangbbsApplication         : Starting YangbbsApplication on DESKTOP-G9DDVR8 with PID 12876 (E:\yangidea\yangbbs\target\classes started by Yiang37 in E:\yangidea\yangbbs)
+2020-04-05 20:24:58.921  INFO 12876 --- [restartedMain] com.yang.demo.YangbbsApplication         : No active profile set, falling back to default profiles: default
+2020-04-05 20:24:58.981  INFO 12876 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-04-05 20:24:58.982  INFO 12876 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-04-05 20:24:59.855  INFO 12876 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-05 20:24:59.858  INFO 12876 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-04-05 20:24:59.908  INFO 12876 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35ms. Found 0 Redis repository interfaces.
+2020-04-05 20:25:00.326  INFO 12876 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-05 20:25:00.816  INFO 12876 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2020-04-05 20:25:00.823  INFO 12876 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-05 20:25:00.823  INFO 12876 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-04-05 20:25:00.917  INFO 12876 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-05 20:25:00.917  INFO 12876 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1935 ms
+2020-04-05 20:25:01.654  INFO 12876 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-05 20:25:01.708  INFO 12876 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-05 20:25:02.010  INFO 12876 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-05 20:25:02.177  INFO 12876 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2020-04-05 20:25:02.185  INFO 12876 --- [restartedMain] com.yang.demo.YangbbsApplication         : Started YangbbsApplication in 3.763 seconds (JVM running for 4.713)
+2020-04-05 20:25:02.971  INFO 12876 --- [http-nio-7979-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-05 20:25:02.971  INFO 12876 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-05 20:25:02.983  INFO 12876 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2020-04-05 20:25:24.531  INFO 12032 --- [restartedMain] com.yang.demo.YangbbsApplication         : Starting YangbbsApplication on DESKTOP-G9DDVR8 with PID 12032 (E:\yangidea\yangbbs\target\classes started by Yiang37 in E:\yangidea\yangbbs)
+2020-04-05 20:25:24.538  INFO 12032 --- [restartedMain] com.yang.demo.YangbbsApplication         : No active profile set, falling back to default profiles: default
+2020-04-05 20:25:24.593  INFO 12032 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-04-05 20:25:24.594  INFO 12032 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-04-05 20:25:25.451  INFO 12032 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-05 20:25:25.453  INFO 12032 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-04-05 20:25:25.487  INFO 12032 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17ms. Found 0 Redis repository interfaces.
+2020-04-05 20:25:25.935  INFO 12032 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-05 20:25:26.376  INFO 12032 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2020-04-05 20:25:26.384  INFO 12032 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-05 20:25:26.384  INFO 12032 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-04-05 20:25:26.485  INFO 12032 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-05 20:25:26.486  INFO 12032 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1891 ms
+2020-04-05 20:25:27.253  INFO 12032 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-05 20:25:27.307  INFO 12032 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-05 20:25:27.666  INFO 12032 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-05 20:25:27.808  INFO 12032 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2020-04-05 20:25:27.811  INFO 12032 --- [restartedMain] com.yang.demo.YangbbsApplication         : Started YangbbsApplication in 3.751 seconds (JVM running for 4.644)
+2020-04-05 20:25:28.739  INFO 12032 --- [http-nio-7979-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-05 20:25:28.742  INFO 12032 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-05 20:25:28.750  INFO 12032 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2020-04-05 20:28:06.985  INFO 6292 --- [restartedMain] com.yang.demo.YangbbsApplication         : Starting YangbbsApplication on DESKTOP-G9DDVR8 with PID 6292 (E:\yangidea\yangbbs\target\classes started by Yiang37 in E:\yangidea\yangbbs)
+2020-04-05 20:28:06.988  INFO 6292 --- [restartedMain] com.yang.demo.YangbbsApplication         : No active profile set, falling back to default profiles: default
+2020-04-05 20:28:07.072  INFO 6292 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-04-05 20:28:07.073  INFO 6292 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-04-05 20:28:08.125  INFO 6292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-05 20:28:08.139  INFO 6292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-04-05 20:28:08.221  INFO 6292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32ms. Found 0 Redis repository interfaces.
+2020-04-05 20:28:09.038  INFO 6292 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-05 20:28:09.769  INFO 6292 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2020-04-05 20:28:09.780  INFO 6292 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-05 20:28:09.780  INFO 6292 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-04-05 20:28:09.905  INFO 6292 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-05 20:28:09.905  INFO 6292 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2832 ms
+2020-04-05 20:28:10.718  INFO 6292 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-05 20:28:10.770  INFO 6292 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-05 20:28:11.082  INFO 6292 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-05 20:28:11.260  INFO 6292 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2020-04-05 20:28:11.262  INFO 6292 --- [restartedMain] com.yang.demo.YangbbsApplication         : Started YangbbsApplication in 4.723 seconds (JVM running for 5.617)
+2020-04-05 20:28:11.384  INFO 6292 --- [http-nio-7979-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-05 20:28:11.385  INFO 6292 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-05 20:28:11.395  INFO 6292 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2020-04-05 20:28:43.376  INFO 6292 --- [Thread-14] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-05 20:28:43.869  INFO 6292 --- [restartedMain] com.yang.demo.YangbbsApplication         : Starting YangbbsApplication on DESKTOP-G9DDVR8 with PID 6292 (E:\yangidea\yangbbs\target\classes started by Yiang37 in E:\yangidea\yangbbs)
+2020-04-05 20:28:43.869  INFO 6292 --- [restartedMain] com.yang.demo.YangbbsApplication         : No active profile set, falling back to default profiles: default
+2020-04-05 20:28:44.265  INFO 6292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-05 20:28:44.265  INFO 6292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-04-05 20:28:44.270  INFO 6292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4ms. Found 0 Redis repository interfaces.
+2020-04-05 20:28:44.351  INFO 6292 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-05 20:28:44.431  INFO 6292 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2020-04-05 20:28:44.432  INFO 6292 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-05 20:28:44.432  INFO 6292 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-04-05 20:28:44.454  INFO 6292 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-05 20:28:44.454  INFO 6292 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 576 ms
+2020-04-05 20:28:44.713  INFO 6292 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-05 20:28:44.737  INFO 6292 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-05 20:28:44.883  INFO 6292 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-05 20:28:45.064  INFO 6292 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2020-04-05 20:28:45.064  INFO 6292 --- [restartedMain] com.yang.demo.YangbbsApplication         : Started YangbbsApplication in 1.24 seconds (JVM running for 39.419)
+2020-04-05 20:28:45.066  INFO 6292 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-04-05 20:28:46.139  INFO 6292 --- [http-nio-7979-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-05 20:28:46.140  INFO 6292 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-05 20:28:46.145  INFO 6292 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-04-05 20:29:19.044  INFO 6292 --- [Thread-22] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-05 20:29:19.287  INFO 6292 --- [restartedMain] com.yang.demo.YangbbsApplication         : Starting YangbbsApplication on DESKTOP-G9DDVR8 with PID 6292 (E:\yangidea\yangbbs\target\classes started by Yiang37 in E:\yangidea\yangbbs)
+2020-04-05 20:29:19.288  INFO 6292 --- [restartedMain] com.yang.demo.YangbbsApplication         : No active profile set, falling back to default profiles: default
+2020-04-05 20:29:19.495  INFO 6292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-05 20:29:19.495  INFO 6292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-04-05 20:29:19.504  INFO 6292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8ms. Found 0 Redis repository interfaces.
+2020-04-05 20:29:19.613  INFO 6292 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-05 20:29:19.716  INFO 6292 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2020-04-05 20:29:19.718  INFO 6292 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-05 20:29:19.718  INFO 6292 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-04-05 20:29:19.744  INFO 6292 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-05 20:29:19.745  INFO 6292 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 454 ms
+2020-04-05 20:29:19.918  INFO 6292 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-05 20:29:19.949  INFO 6292 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-05 20:29:20.101  INFO 6292 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-05 20:29:20.329  INFO 6292 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2020-04-05 20:29:20.329  INFO 6292 --- [restartedMain] com.yang.demo.YangbbsApplication         : Started YangbbsApplication in 1.083 seconds (JVM running for 74.683)
+2020-04-05 20:29:20.331  INFO 6292 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-04-05 20:29:21.696  INFO 6292 --- [http-nio-7979-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-05 20:29:21.696  INFO 6292 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-05 20:29:21.698  INFO 6292 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2020-04-05 20:33:29.755  INFO 6292 --- [http-nio-7979-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-05 20:33:30.517  INFO 6292 --- [http-nio-7979-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-05 20:33:34.198  INFO 6292 --- [http-nio-7979-exec-7] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-04-05 20:33:34.199  INFO 6292 --- [http-nio-7979-exec-7] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-04-05 20:41:48.286  INFO 8488 --- [restartedMain] com.yang.demo.YangbbsApplication         : Starting YangbbsApplication on DESKTOP-G9DDVR8 with PID 8488 (E:\yangidea\yangbbs\target\classes started by Yiang37 in E:\yangidea\yangbbs)
+2020-04-05 20:41:48.289  INFO 8488 --- [restartedMain] com.yang.demo.YangbbsApplication         : No active profile set, falling back to default profiles: default
+2020-04-05 20:41:48.379  INFO 8488 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-04-05 20:41:48.379  INFO 8488 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-04-05 20:41:49.559  INFO 8488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-05 20:41:49.563  INFO 8488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-04-05 20:41:49.600  INFO 8488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 Redis repository interfaces.
+2020-04-05 20:41:49.974  INFO 8488 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-05 20:41:50.734  INFO 8488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2020-04-05 20:41:50.749  INFO 8488 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-05 20:41:50.750  INFO 8488 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-04-05 20:41:50.881  INFO 8488 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-05 20:41:50.882  INFO 8488 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2502 ms
+2020-04-05 20:41:51.825  INFO 8488 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-05 20:41:51.896  INFO 8488 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-05 20:41:52.223  INFO 8488 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-05 20:41:52.360  INFO 8488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2020-04-05 20:41:52.362  INFO 8488 --- [restartedMain] com.yang.demo.YangbbsApplication         : Started YangbbsApplication in 4.649 seconds (JVM running for 5.538)
+2020-04-05 20:42:51.696  INFO 8488 --- [http-nio-7979-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-05 20:42:51.697  INFO 8488 --- [http-nio-7979-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-05 20:42:51.720  INFO 8488 --- [http-nio-7979-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 23 ms
+2020-04-05 20:42:51.761  INFO 8488 --- [http-nio-7979-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-05 20:42:52.567  INFO 8488 --- [http-nio-7979-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-05 20:43:10.177  INFO 8488 --- [http-nio-7979-exec-8] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-04-05 20:43:10.178  INFO 8488 --- [http-nio-7979-exec-8] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-04-05 20:44:26.489  INFO 5088 --- [restartedMain] com.yang.demo.YangbbsApplication         : Starting YangbbsApplication on DESKTOP-G9DDVR8 with PID 5088 (E:\yangidea\yangbbs\target\classes started by Yiang37 in E:\yangidea\yangbbs)
+2020-04-05 20:44:26.493  INFO 5088 --- [restartedMain] com.yang.demo.YangbbsApplication         : No active profile set, falling back to default profiles: default
+2020-04-05 20:44:26.550  INFO 5088 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-04-05 20:44:26.550  INFO 5088 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-04-05 20:44:27.235  INFO 5088 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-05 20:44:27.236  INFO 5088 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-04-05 20:44:27.257  INFO 5088 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11ms. Found 0 Redis repository interfaces.
+2020-04-05 20:44:27.605  INFO 5088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-05 20:44:28.066  INFO 5088 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2020-04-05 20:44:28.075  INFO 5088 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-05 20:44:28.075  INFO 5088 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-04-05 20:44:28.201  INFO 5088 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-05 20:44:28.202  INFO 5088 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1652 ms
+2020-04-05 20:44:29.059  INFO 5088 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-05 20:44:29.119  INFO 5088 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-05 20:44:29.457  INFO 5088 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-05 20:44:29.596  INFO 5088 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2020-04-05 20:44:29.599  INFO 5088 --- [restartedMain] com.yang.demo.YangbbsApplication         : Started YangbbsApplication in 3.622 seconds (JVM running for 4.434)
+2020-04-05 20:44:33.795  INFO 5088 --- [http-nio-7979-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-05 20:44:33.795  INFO 5088 --- [http-nio-7979-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-05 20:44:33.801  INFO 5088 --- [http-nio-7979-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2020-04-05 20:44:33.827  INFO 5088 --- [http-nio-7979-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-05 20:44:34.497  INFO 5088 --- [http-nio-7979-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-05 20:45:49.864  INFO 7336 --- [restartedMain] com.yang.demo.YangbbsApplication         : Starting YangbbsApplication on DESKTOP-G9DDVR8 with PID 7336 (E:\yangidea\yangbbs\target\classes started by Yiang37 in E:\yangidea\yangbbs)
+2020-04-05 20:45:49.868  INFO 7336 --- [restartedMain] com.yang.demo.YangbbsApplication         : No active profile set, falling back to default profiles: default
+2020-04-05 20:45:49.921  INFO 7336 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-04-05 20:45:49.922  INFO 7336 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-04-05 20:45:50.641  INFO 7336 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-05 20:45:50.645  INFO 7336 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-04-05 20:45:50.664  INFO 7336 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8ms. Found 0 Redis repository interfaces.
+2020-04-05 20:45:51.055  INFO 7336 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-05 20:45:51.529  INFO 7336 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2020-04-05 20:45:51.540  INFO 7336 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-05 20:45:51.541  INFO 7336 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-04-05 20:45:51.658  INFO 7336 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-05 20:45:51.659  INFO 7336 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1737 ms
+2020-04-05 20:45:52.690  INFO 7336 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-05 20:45:52.759  INFO 7336 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-05 20:45:53.202  INFO 7336 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-05 20:45:53.403  INFO 7336 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2020-04-05 20:45:53.406  INFO 7336 --- [restartedMain] com.yang.demo.YangbbsApplication         : Started YangbbsApplication in 4.094 seconds (JVM running for 4.874)
+2020-04-05 20:45:53.660  INFO 7336 --- [http-nio-7979-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-05 20:45:53.660  INFO 7336 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-05 20:45:53.667  INFO 7336 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2020-04-05 20:45:53.693  INFO 7336 --- [http-nio-7979-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-05 20:45:54.532  INFO 7336 --- [http-nio-7979-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-05 20:48:01.041  INFO 6764 --- [restartedMain] com.yang.demo.YangbbsApplication         : Starting YangbbsApplication on DESKTOP-G9DDVR8 with PID 6764 (E:\yangidea\yangbbs\target\classes started by Yiang37 in E:\yangidea\yangbbs)
+2020-04-05 20:48:01.044  INFO 6764 --- [restartedMain] com.yang.demo.YangbbsApplication         : No active profile set, falling back to default profiles: default
+2020-04-05 20:48:01.272  INFO 6764 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-04-05 20:48:01.272  INFO 6764 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-04-05 20:48:02.327  INFO 6764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-05 20:48:02.331  INFO 6764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-04-05 20:48:02.381  INFO 6764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27ms. Found 0 Redis repository interfaces.
+2020-04-05 20:48:02.870  INFO 6764 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-05 20:48:03.513  INFO 6764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2020-04-05 20:48:03.521  INFO 6764 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-05 20:48:03.521  INFO 6764 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-04-05 20:48:03.590  INFO 6764 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-05 20:48:03.590  INFO 6764 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2318 ms
+2020-04-05 20:48:04.374  INFO 6764 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-05 20:48:04.442  INFO 6764 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-05 20:48:04.878  INFO 6764 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-05 20:48:05.191  INFO 6764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2020-04-05 20:48:05.200  INFO 6764 --- [restartedMain] com.yang.demo.YangbbsApplication         : Started YangbbsApplication in 4.756 seconds (JVM running for 6.428)
+2020-04-05 20:48:06.809  INFO 6764 --- [http-nio-7979-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-05 20:48:06.810  INFO 6764 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-05 20:48:06.819  INFO 6764 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2020-04-05 20:48:06.846  INFO 6764 --- [http-nio-7979-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-05 20:48:07.622  INFO 6764 --- [http-nio-7979-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-05 20:48:31.980  INFO 6764 --- [http-nio-7979-exec-4] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-04-05 20:48:31.982  INFO 6764 --- [http-nio-7979-exec-4] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-04-05 20:49:45.287  INFO 8576 --- [restartedMain] com.yang.demo.YangbbsApplication         : Starting YangbbsApplication on DESKTOP-G9DDVR8 with PID 8576 (E:\yangidea\yangbbs\target\classes started by Yiang37 in E:\yangidea\yangbbs)
+2020-04-05 20:49:45.290  INFO 8576 --- [restartedMain] com.yang.demo.YangbbsApplication         : No active profile set, falling back to default profiles: default
+2020-04-05 20:49:45.403  INFO 8576 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-04-05 20:49:45.403  INFO 8576 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-04-05 20:49:46.427  INFO 8576 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-05 20:49:46.429  INFO 8576 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-04-05 20:49:46.461  INFO 8576 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15ms. Found 0 Redis repository interfaces.
+2020-04-05 20:49:46.863  INFO 8576 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-05 20:49:47.563  INFO 8576 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2020-04-05 20:49:47.578  INFO 8576 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-05 20:49:47.579  INFO 8576 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-04-05 20:49:47.763  INFO 8576 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-05 20:49:47.764  INFO 8576 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2360 ms
+2020-04-05 20:49:49.079  INFO 8576 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-05 20:49:49.156  INFO 8576 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-05 20:49:49.516  INFO 8576 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-05 20:49:49.671  INFO 8576 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2020-04-05 20:49:49.675  INFO 8576 --- [restartedMain] com.yang.demo.YangbbsApplication         : Started YangbbsApplication in 4.891 seconds (JVM running for 5.686)
+2020-04-05 20:49:49.913  INFO 8576 --- [http-nio-7979-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-05 20:49:49.913  INFO 8576 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-05 20:49:49.919  INFO 8576 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-04-05 20:49:49.946  INFO 8576 --- [http-nio-7979-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-05 20:49:50.705  INFO 8576 --- [http-nio-7979-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-05 20:53:36.064  INFO 876 --- [restartedMain] com.yang.demo.YangbbsApplication         : Starting YangbbsApplication on DESKTOP-G9DDVR8 with PID 876 (E:\yangidea\yangbbs\target\classes started by Yiang37 in E:\yangidea\yangbbs)
+2020-04-05 20:53:36.067  INFO 876 --- [restartedMain] com.yang.demo.YangbbsApplication         : No active profile set, falling back to default profiles: default
+2020-04-05 20:53:36.138  INFO 876 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-04-05 20:53:36.138  INFO 876 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-04-05 20:53:36.993  INFO 876 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-05 20:53:36.995  INFO 876 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-04-05 20:53:37.021  INFO 876 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10ms. Found 0 Redis repository interfaces.
+2020-04-05 20:53:37.344  INFO 876 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-05 20:53:37.905  INFO 876 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2020-04-05 20:53:37.916  INFO 876 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-05 20:53:37.917  INFO 876 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-04-05 20:53:38.057  INFO 876 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-05 20:53:38.057  INFO 876 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1919 ms
+2020-04-05 20:53:39.061  INFO 876 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-05 20:53:39.132  INFO 876 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-05 20:53:39.450  INFO 876 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-05 20:53:39.616  INFO 876 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2020-04-05 20:53:39.622  INFO 876 --- [restartedMain] com.yang.demo.YangbbsApplication         : Started YangbbsApplication in 4.083 seconds (JVM running for 5.096)
+2020-04-05 20:53:39.757  INFO 876 --- [http-nio-7979-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-05 20:53:39.758  INFO 876 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-05 20:53:39.764  INFO 876 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2020-04-05 20:53:39.790  INFO 876 --- [http-nio-7979-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-05 20:53:40.522  INFO 876 --- [http-nio-7979-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-05 21:01:34.351  INFO 2460 --- [restartedMain] com.yang.demo.YangbbsApplication         : Starting YangbbsApplication on DESKTOP-G9DDVR8 with PID 2460 (E:\yangidea\yangbbs\target\classes started by Yiang37 in E:\yangidea\yangbbs)
+2020-04-05 21:01:34.358  INFO 2460 --- [restartedMain] com.yang.demo.YangbbsApplication         : No active profile set, falling back to default profiles: default
+2020-04-05 21:01:34.423  INFO 2460 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-04-05 21:01:34.423  INFO 2460 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-04-05 21:01:35.279  INFO 2460 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-05 21:01:35.282  INFO 2460 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-04-05 21:01:35.315  INFO 2460 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16ms. Found 0 Redis repository interfaces.
+2020-04-05 21:01:35.845  INFO 2460 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-05 21:01:36.478  INFO 2460 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2020-04-05 21:01:36.496  INFO 2460 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-05 21:01:36.497  INFO 2460 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-04-05 21:01:36.700  INFO 2460 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-05 21:01:36.701  INFO 2460 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2278 ms
+2020-04-05 21:01:38.094  INFO 2460 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-05 21:01:38.194  INFO 2460 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-05 21:01:38.729  INFO 2460 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-05 21:01:39.010  INFO 2460 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2020-04-05 21:01:39.013  INFO 2460 --- [restartedMain] com.yang.demo.YangbbsApplication         : Started YangbbsApplication in 5.233 seconds (JVM running for 6.144)
+2020-04-05 21:01:39.147  INFO 2460 --- [http-nio-7979-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-05 21:01:39.148  INFO 2460 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-05 21:01:39.156  INFO 2460 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-04-05 21:01:39.184  INFO 2460 --- [http-nio-7979-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-05 21:01:39.942  INFO 2460 --- [http-nio-7979-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-05 21:05:07.383  INFO 9128 --- [restartedMain] com.yang.demo.YangbbsApplication         : Starting YangbbsApplication on DESKTOP-G9DDVR8 with PID 9128 (E:\yangidea\yangbbs\target\classes started by Yiang37 in E:\yangidea\yangbbs)
+2020-04-05 21:05:07.387  INFO 9128 --- [restartedMain] com.yang.demo.YangbbsApplication         : No active profile set, falling back to default profiles: default
+2020-04-05 21:05:07.453  INFO 9128 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-04-05 21:05:07.453  INFO 9128 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-04-05 21:05:08.768  INFO 9128 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-05 21:05:08.773  INFO 9128 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-04-05 21:05:08.800  INFO 9128 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13ms. Found 0 Redis repository interfaces.
+2020-04-05 21:05:09.227  INFO 9128 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-05 21:05:09.967  INFO 9128 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2020-04-05 21:05:09.981  INFO 9128 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-05 21:05:09.982  INFO 9128 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-04-05 21:05:10.156  INFO 9128 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-05 21:05:10.157  INFO 9128 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2703 ms
+2020-04-05 21:05:11.342  INFO 9128 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-05 21:05:11.411  INFO 9128 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-05 21:05:11.742  INFO 9128 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-05 21:05:11.923  INFO 9128 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2020-04-05 21:05:11.926  INFO 9128 --- [restartedMain] com.yang.demo.YangbbsApplication         : Started YangbbsApplication in 5.069 seconds (JVM running for 5.872)
+2020-04-05 21:05:12.989  INFO 9128 --- [http-nio-7979-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-05 21:05:12.990  INFO 9128 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-05 21:05:12.999  INFO 9128 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2020-04-05 21:05:13.040  INFO 9128 --- [http-nio-7979-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-05 21:05:13.865  INFO 9128 --- [http-nio-7979-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-05 21:10:08.280  INFO 10144 --- [restartedMain] com.yang.demo.YangbbsApplication         : Starting YangbbsApplication on DESKTOP-G9DDVR8 with PID 10144 (E:\yangidea\yangbbs\target\classes started by Yiang37 in E:\yangidea\yangbbs)
+2020-04-05 21:10:08.284  INFO 10144 --- [restartedMain] com.yang.demo.YangbbsApplication         : No active profile set, falling back to default profiles: default
+2020-04-05 21:10:08.364  INFO 10144 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-04-05 21:10:08.364  INFO 10144 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-04-05 21:10:09.364  INFO 10144 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-05 21:10:09.366  INFO 10144 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-04-05 21:10:09.390  INFO 10144 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11ms. Found 0 Redis repository interfaces.
+2020-04-05 21:10:09.843  INFO 10144 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-05 21:10:10.566  INFO 10144 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2020-04-05 21:10:10.574  INFO 10144 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-05 21:10:10.575  INFO 10144 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-04-05 21:10:10.669  INFO 10144 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-05 21:10:10.669  INFO 10144 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2305 ms
+2020-04-05 21:10:11.420  INFO 10144 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-05 21:10:11.478  INFO 10144 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-05 21:10:11.870  INFO 10144 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-05 21:10:12.039  INFO 10144 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2020-04-05 21:10:12.041  INFO 10144 --- [restartedMain] com.yang.demo.YangbbsApplication         : Started YangbbsApplication in 4.336 seconds (JVM running for 5.238)
+2020-04-05 21:10:13.105  INFO 10144 --- [http-nio-7979-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-05 21:10:13.106  INFO 10144 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-05 21:10:13.120  INFO 10144 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2020-04-05 21:10:13.157  INFO 10144 --- [http-nio-7979-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-05 21:10:13.982  INFO 10144 --- [http-nio-7979-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-05 21:10:39.995  INFO 10144 --- [http-nio-7979-exec-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-04-05 21:10:39.997  INFO 10144 --- [http-nio-7979-exec-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-04-05 21:13:50.168  INFO 2172 --- [restartedMain] com.yang.demo.YangbbsApplication         : Starting YangbbsApplication on DESKTOP-G9DDVR8 with PID 2172 (E:\yangidea\yangbbs\target\classes started by Yiang37 in E:\yangidea\yangbbs)
+2020-04-05 21:13:50.173  INFO 2172 --- [restartedMain] com.yang.demo.YangbbsApplication         : No active profile set, falling back to default profiles: default
+2020-04-05 21:13:50.272  INFO 2172 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-04-05 21:13:50.272  INFO 2172 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-04-05 21:13:50.968  INFO 2172 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-05 21:13:50.970  INFO 2172 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-04-05 21:13:50.989  INFO 2172 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8ms. Found 0 Redis repository interfaces.
+2020-04-05 21:13:51.394  INFO 2172 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-05 21:13:51.860  INFO 2172 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2020-04-05 21:13:51.876  INFO 2172 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-05 21:13:51.878  INFO 2172 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-04-05 21:13:52.034  INFO 2172 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-05 21:13:52.034  INFO 2172 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1761 ms
+2020-04-05 21:13:53.518  INFO 2172 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-05 21:13:53.638  INFO 2172 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-05 21:13:54.079  INFO 2172 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-05 21:13:54.257  INFO 2172 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2020-04-05 21:13:54.260  INFO 2172 --- [restartedMain] com.yang.demo.YangbbsApplication         : Started YangbbsApplication in 4.707 seconds (JVM running for 5.663)
+2020-04-05 21:13:54.299  INFO 2172 --- [http-nio-7979-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-05 21:13:54.300  INFO 2172 --- [http-nio-7979-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-05 21:13:54.306  INFO 2172 --- [http-nio-7979-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2020-04-05 21:13:54.335  INFO 2172 --- [http-nio-7979-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-05 21:13:55.081  INFO 2172 --- [http-nio-7979-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-05 21:14:28.190  INFO 9476 --- [restartedMain] com.yang.demo.YangbbsApplication         : Starting YangbbsApplication on DESKTOP-G9DDVR8 with PID 9476 (E:\yangidea\yangbbs\target\classes started by Yiang37 in E:\yangidea\yangbbs)
+2020-04-05 21:14:28.192  INFO 9476 --- [restartedMain] com.yang.demo.YangbbsApplication         : No active profile set, falling back to default profiles: default
+2020-04-05 21:14:28.258  INFO 9476 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-04-05 21:14:28.258  INFO 9476 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-04-05 21:14:29.123  INFO 9476 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-05 21:14:29.126  INFO 9476 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-04-05 21:14:29.151  INFO 9476 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11ms. Found 0 Redis repository interfaces.
+2020-04-05 21:14:29.497  INFO 9476 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-05 21:14:30.116  INFO 9476 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2020-04-05 21:14:30.130  INFO 9476 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-05 21:14:30.131  INFO 9476 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-04-05 21:14:30.245  INFO 9476 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-05 21:14:30.245  INFO 9476 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1987 ms
+2020-04-05 21:14:31.167  INFO 9476 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-05 21:14:31.236  INFO 9476 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-05 21:14:31.574  INFO 9476 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-05 21:14:31.787  INFO 9476 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2020-04-05 21:14:31.791  INFO 9476 --- [restartedMain] com.yang.demo.YangbbsApplication         : Started YangbbsApplication in 4.151 seconds (JVM running for 4.925)
+2020-04-05 21:14:31.991  INFO 9476 --- [http-nio-7979-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-05 21:14:31.991  INFO 9476 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-05 21:14:31.997  INFO 9476 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-04-05 21:14:32.027  INFO 9476 --- [http-nio-7979-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-05 21:14:33.716  INFO 9476 --- [http-nio-7979-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-05 21:15:20.287  INFO 7356 --- [restartedMain] com.yang.demo.YangbbsApplication         : Starting YangbbsApplication on DESKTOP-G9DDVR8 with PID 7356 (E:\yangidea\yangbbs\target\classes started by Yiang37 in E:\yangidea\yangbbs)
+2020-04-05 21:15:20.290  INFO 7356 --- [restartedMain] com.yang.demo.YangbbsApplication         : No active profile set, falling back to default profiles: default
+2020-04-05 21:15:20.367  INFO 7356 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-04-05 21:15:20.368  INFO 7356 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-04-05 21:15:21.246  INFO 7356 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-05 21:15:21.249  INFO 7356 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-04-05 21:15:21.276  INFO 7356 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 Redis repository interfaces.
+2020-04-05 21:15:21.594  INFO 7356 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-05 21:15:22.166  INFO 7356 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2020-04-05 21:15:22.184  INFO 7356 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-05 21:15:22.184  INFO 7356 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-04-05 21:15:22.319  INFO 7356 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-05 21:15:22.320  INFO 7356 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1952 ms
+2020-04-05 21:15:23.352  INFO 7356 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-05 21:15:23.407  INFO 7356 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-05 21:15:23.774  INFO 7356 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-05 21:15:24.016  INFO 7356 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2020-04-05 21:15:24.018  INFO 7356 --- [restartedMain] com.yang.demo.YangbbsApplication         : Started YangbbsApplication in 4.277 seconds (JVM running for 5.055)
+2020-04-05 21:15:24.368  INFO 7356 --- [http-nio-7979-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-05 21:15:24.368  INFO 7356 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-05 21:15:24.379  INFO 7356 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2020-04-05 21:15:24.412  INFO 7356 --- [http-nio-7979-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-05 21:15:25.431  INFO 7356 --- [http-nio-7979-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-05 21:16:33.558  INFO 8640 --- [restartedMain] com.yang.demo.YangbbsApplication         : Starting YangbbsApplication on DESKTOP-G9DDVR8 with PID 8640 (E:\yangidea\yangbbs\target\classes started by Yiang37 in E:\yangidea\yangbbs)
+2020-04-05 21:16:33.563  INFO 8640 --- [restartedMain] com.yang.demo.YangbbsApplication         : No active profile set, falling back to default profiles: default
+2020-04-05 21:16:33.645  INFO 8640 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-04-05 21:16:33.645  INFO 8640 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-04-05 21:16:34.391  INFO 8640 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-05 21:16:34.393  INFO 8640 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-04-05 21:16:34.413  INFO 8640 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8ms. Found 0 Redis repository interfaces.
+2020-04-05 21:16:34.751  INFO 8640 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-05 21:16:35.247  INFO 8640 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2020-04-05 21:16:35.258  INFO 8640 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-05 21:16:35.259  INFO 8640 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-04-05 21:16:35.370  INFO 8640 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-05 21:16:35.370  INFO 8640 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1725 ms
+2020-04-05 21:16:36.609  INFO 8640 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-05 21:16:36.697  INFO 8640 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-05 21:16:37.234  INFO 8640 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-05 21:16:37.461  INFO 8640 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2020-04-05 21:16:37.464  INFO 8640 --- [restartedMain] com.yang.demo.YangbbsApplication         : Started YangbbsApplication in 4.366 seconds (JVM running for 5.156)
+2020-04-05 21:16:37.618  INFO 8640 --- [http-nio-7979-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-05 21:16:37.618  INFO 8640 --- [http-nio-7979-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-05 21:16:37.629  INFO 8640 --- [http-nio-7979-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2020-04-05 21:16:37.662  INFO 8640 --- [http-nio-7979-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-05 21:16:38.486  INFO 8640 --- [http-nio-7979-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-05 21:20:42.863  INFO 2552 --- [restartedMain] com.yang.demo.YangbbsApplication         : Starting YangbbsApplication on DESKTOP-G9DDVR8 with PID 2552 (E:\yangidea\yangbbs\target\classes started by Yiang37 in E:\yangidea\yangbbs)
+2020-04-05 21:20:42.867  INFO 2552 --- [restartedMain] com.yang.demo.YangbbsApplication         : No active profile set, falling back to default profiles: default
+2020-04-05 21:20:42.937  INFO 2552 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-04-05 21:20:42.937  INFO 2552 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-04-05 21:20:43.673  INFO 2552 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-05 21:20:43.675  INFO 2552 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-04-05 21:20:43.708  INFO 2552 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16ms. Found 0 Redis repository interfaces.
+2020-04-05 21:20:44.101  INFO 2552 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-05 21:20:44.557  INFO 2552 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2020-04-05 21:20:44.566  INFO 2552 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-05 21:20:44.566  INFO 2552 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-04-05 21:20:44.697  INFO 2552 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-05 21:20:44.698  INFO 2552 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1761 ms
+2020-04-05 21:20:45.615  INFO 2552 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-05 21:20:45.681  INFO 2552 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-05 21:20:46.063  INFO 2552 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-05 21:20:46.272  INFO 2552 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2020-04-05 21:20:46.274  INFO 2552 --- [restartedMain] com.yang.demo.YangbbsApplication         : Started YangbbsApplication in 3.922 seconds (JVM running for 4.687)
+2020-04-05 21:21:28.990  INFO 8812 --- [restartedMain] com.yang.demo.YangbbsApplication         : Starting YangbbsApplication on DESKTOP-G9DDVR8 with PID 8812 (E:\yangidea\yangbbs\target\classes started by Yiang37 in E:\yangidea\yangbbs)
+2020-04-05 21:21:28.993  INFO 8812 --- [restartedMain] com.yang.demo.YangbbsApplication         : No active profile set, falling back to default profiles: default
+2020-04-05 21:21:29.068  INFO 8812 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-04-05 21:21:29.068  INFO 8812 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-04-05 21:21:29.942  INFO 8812 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-05 21:21:29.944  INFO 8812 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-04-05 21:21:29.969  INFO 8812 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 Redis repository interfaces.
+2020-04-05 21:21:30.304  INFO 8812 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-05 21:21:30.979  INFO 8812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2020-04-05 21:21:30.989  INFO 8812 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-05 21:21:30.989  INFO 8812 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-04-05 21:21:31.089  INFO 8812 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-05 21:21:31.089  INFO 8812 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2020 ms
+2020-04-05 21:21:31.963  INFO 8812 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-05 21:21:32.025  INFO 8812 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-05 21:21:32.324  INFO 8812 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-05 21:21:32.525  INFO 8812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2020-04-05 21:21:32.529  INFO 8812 --- [restartedMain] com.yang.demo.YangbbsApplication         : Started YangbbsApplication in 4.067 seconds (JVM running for 4.858)
+2020-04-05 21:21:32.703  INFO 8812 --- [http-nio-7979-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-05 21:21:32.703  INFO 8812 --- [http-nio-7979-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-05 21:21:32.710  INFO 8812 --- [http-nio-7979-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2020-04-05 21:21:32.746  INFO 8812 --- [http-nio-7979-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-05 21:21:33.615  INFO 8812 --- [http-nio-7979-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-05 21:23:59.023  INFO 12996 --- [restartedMain] com.yang.demo.YangbbsApplication         : Starting YangbbsApplication on DESKTOP-G9DDVR8 with PID 12996 (E:\yangidea\yangbbs\target\classes started by Yiang37 in E:\yangidea\yangbbs)
+2020-04-05 21:23:59.026  INFO 12996 --- [restartedMain] com.yang.demo.YangbbsApplication         : No active profile set, falling back to default profiles: default
+2020-04-05 21:23:59.108  INFO 12996 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-04-05 21:23:59.109  INFO 12996 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-04-05 21:24:00.081  INFO 12996 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-05 21:24:00.084  INFO 12996 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-04-05 21:24:00.117  INFO 12996 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13ms. Found 0 Redis repository interfaces.
+2020-04-05 21:24:00.555  INFO 12996 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-05 21:24:01.188  INFO 12996 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2020-04-05 21:24:01.204  INFO 12996 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-05 21:24:01.205  INFO 12996 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-04-05 21:24:01.390  INFO 12996 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-05 21:24:01.391  INFO 12996 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2282 ms
+2020-04-05 21:24:02.221  INFO 12996 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-05 21:24:02.387  INFO 12996 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-05 21:24:02.898  INFO 12996 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-05 21:24:03.093  INFO 12996 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2020-04-05 21:24:03.096  INFO 12996 --- [restartedMain] com.yang.demo.YangbbsApplication         : Started YangbbsApplication in 4.693 seconds (JVM running for 5.797)
+2020-04-05 21:24:03.137  INFO 12996 --- [http-nio-7979-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-05 21:24:03.137  INFO 12996 --- [http-nio-7979-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-05 21:24:03.143  INFO 12996 --- [http-nio-7979-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2020-04-05 21:24:03.179  INFO 12996 --- [http-nio-7979-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-05 21:24:04.018  INFO 12996 --- [http-nio-7979-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-05 21:25:25.349  INFO 4132 --- [restartedMain] com.yang.demo.YangbbsApplication         : Starting YangbbsApplication on DESKTOP-G9DDVR8 with PID 4132 (E:\yangidea\yangbbs\target\classes started by Yiang37 in E:\yangidea\yangbbs)
+2020-04-05 21:25:25.353  INFO 4132 --- [restartedMain] com.yang.demo.YangbbsApplication         : No active profile set, falling back to default profiles: default
+2020-04-05 21:25:25.409  INFO 4132 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-04-05 21:25:25.410  INFO 4132 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-04-05 21:25:26.385  INFO 4132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-05 21:25:26.387  INFO 4132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-04-05 21:25:26.410  INFO 4132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11ms. Found 0 Redis repository interfaces.
+2020-04-05 21:25:26.725  INFO 4132 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-05 21:25:27.281  INFO 4132 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2020-04-05 21:25:27.297  INFO 4132 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-05 21:25:27.297  INFO 4132 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-04-05 21:25:27.401  INFO 4132 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-05 21:25:27.402  INFO 4132 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1992 ms
+2020-04-05 21:25:28.116  INFO 4132 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-05 21:25:28.168  INFO 4132 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-05 21:25:28.489  INFO 4132 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-05 21:25:28.651  INFO 4132 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2020-04-05 21:25:28.653  INFO 4132 --- [restartedMain] com.yang.demo.YangbbsApplication         : Started YangbbsApplication in 3.797 seconds (JVM running for 4.584)
+2020-04-05 21:25:56.426  INFO 4132 --- [http-nio-7979-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-05 21:25:56.427  INFO 4132 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-05 21:25:56.432  INFO 4132 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-04-05 21:25:56.461  INFO 4132 --- [http-nio-7979-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-05 21:25:57.542  INFO 4132 --- [http-nio-7979-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-05 21:26:43.727  INFO 5192 --- [restartedMain] com.yang.demo.YangbbsApplication         : Starting YangbbsApplication on DESKTOP-G9DDVR8 with PID 5192 (E:\yangidea\yangbbs\target\classes started by Yiang37 in E:\yangidea\yangbbs)
+2020-04-05 21:26:43.730  INFO 5192 --- [restartedMain] com.yang.demo.YangbbsApplication         : No active profile set, falling back to default profiles: default
+2020-04-05 21:26:43.789  INFO 5192 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-04-05 21:26:43.789  INFO 5192 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-04-05 21:26:44.715  INFO 5192 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-05 21:26:44.717  INFO 5192 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-04-05 21:26:44.750  INFO 5192 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15ms. Found 0 Redis repository interfaces.
+2020-04-05 21:26:45.186  INFO 5192 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-05 21:26:45.659  INFO 5192 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2020-04-05 21:26:45.674  INFO 5192 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-05 21:26:45.675  INFO 5192 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-04-05 21:26:45.817  INFO 5192 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-05 21:26:45.818  INFO 5192 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2029 ms
+2020-04-05 21:26:46.788  INFO 5192 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-05 21:26:46.866  INFO 5192 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-05 21:26:47.192  INFO 5192 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-05 21:26:47.356  INFO 5192 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2020-04-05 21:26:47.359  INFO 5192 --- [restartedMain] com.yang.demo.YangbbsApplication         : Started YangbbsApplication in 4.151 seconds (JVM running for 4.934)
+2020-04-05 21:26:52.576  INFO 5192 --- [http-nio-7979-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-05 21:26:52.576  INFO 5192 --- [http-nio-7979-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-05 21:26:52.581  INFO 5192 --- [http-nio-7979-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-04-05 21:26:52.630  INFO 5192 --- [http-nio-7979-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-05 21:26:53.265  INFO 5192 --- [http-nio-7979-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-05 21:29:27.750  INFO 1324 --- [restartedMain] com.yang.demo.YangbbsApplication         : Starting YangbbsApplication on DESKTOP-G9DDVR8 with PID 1324 (E:\yangidea\yangbbs\target\classes started by Yiang37 in E:\yangidea\yangbbs)
+2020-04-05 21:29:27.755  INFO 1324 --- [restartedMain] com.yang.demo.YangbbsApplication         : No active profile set, falling back to default profiles: default
+2020-04-05 21:29:27.826  INFO 1324 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-04-05 21:29:27.827  INFO 1324 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-04-05 21:29:28.661  INFO 1324 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-05 21:29:28.663  INFO 1324 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-04-05 21:29:28.685  INFO 1324 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10ms. Found 0 Redis repository interfaces.
+2020-04-05 21:29:29.069  INFO 1324 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-05 21:29:29.816  INFO 1324 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2020-04-05 21:29:29.824  INFO 1324 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-05 21:29:29.825  INFO 1324 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-04-05 21:29:29.931  INFO 1324 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-05 21:29:29.932  INFO 1324 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2105 ms
+2020-04-05 21:29:30.765  INFO 1324 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-05 21:29:30.838  INFO 1324 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-05 21:29:31.206  INFO 1324 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-05 21:29:31.373  INFO 1324 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2020-04-05 21:29:31.375  INFO 1324 --- [restartedMain] com.yang.demo.YangbbsApplication         : Started YangbbsApplication in 4.165 seconds (JVM running for 4.961)
+2020-04-05 21:29:34.468  INFO 1324 --- [http-nio-7979-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-05 21:29:34.468  INFO 1324 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-05 21:29:34.473  INFO 1324 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-04-05 21:29:34.514  INFO 1324 --- [http-nio-7979-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-05 21:29:35.245  INFO 1324 --- [http-nio-7979-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-05 21:30:30.871  INFO 1324 --- [http-nio-7979-exec-10] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-04-05 21:30:30.872  INFO 1324 --- [http-nio-7979-exec-10] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-04-05 21:32:19.960  WARN 1324 --- [http-nio-7979-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [CustomizeException(message=你要找的问题不存在了..., code=9902)]
+2020-04-05 21:34:54.243  WARN 1324 --- [http-nio-7979-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [CustomizeException(message=你要找的问题不存在了..., code=9902)]
+2020-04-05 21:35:00.133  WARN 1324 --- [http-nio-7979-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [CustomizeException(message=你要找的问题不存在了..., code=9902)]
+2020-04-05 21:42:48.352  INFO 9500 --- [restartedMain] com.yang.demo.YangbbsApplication         : Starting YangbbsApplication on DESKTOP-G9DDVR8 with PID 9500 (E:\yangidea\yangbbs\target\classes started by Yiang37 in E:\yangidea\yangbbs)
+2020-04-05 21:42:48.355  INFO 9500 --- [restartedMain] com.yang.demo.YangbbsApplication         : No active profile set, falling back to default profiles: default
+2020-04-05 21:42:48.420  INFO 9500 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-04-05 21:42:48.420  INFO 9500 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-04-05 21:42:49.120  INFO 9500 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-05 21:42:49.123  INFO 9500 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-04-05 21:42:49.151  INFO 9500 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14ms. Found 0 Redis repository interfaces.
+2020-04-05 21:42:49.555  INFO 9500 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-05 21:42:50.029  INFO 9500 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2020-04-05 21:42:50.039  INFO 9500 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-05 21:42:50.039  INFO 9500 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-04-05 21:42:50.171  INFO 9500 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-05 21:42:50.171  INFO 9500 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1751 ms
+2020-04-05 21:42:51.278  INFO 9500 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-05 21:42:51.381  INFO 9500 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-05 21:42:51.801  INFO 9500 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-05 21:42:51.992  INFO 9500 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2020-04-05 21:42:51.996  INFO 9500 --- [restartedMain] com.yang.demo.YangbbsApplication         : Started YangbbsApplication in 4.154 seconds (JVM running for 4.93)
+2020-04-05 21:42:54.292  INFO 9500 --- [http-nio-7979-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-05 21:42:54.292  INFO 9500 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-05 21:42:54.297  INFO 9500 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-04-05 21:42:54.329  INFO 9500 --- [http-nio-7979-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-05 21:42:55.065  INFO 9500 --- [http-nio-7979-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-05 21:47:24.301  INFO 2376 --- [restartedMain] com.yang.demo.YangbbsApplication         : Starting YangbbsApplication on DESKTOP-G9DDVR8 with PID 2376 (E:\yangidea\yangbbs\target\classes started by Yiang37 in E:\yangidea\yangbbs)
+2020-04-05 21:47:24.304  INFO 2376 --- [restartedMain] com.yang.demo.YangbbsApplication         : No active profile set, falling back to default profiles: default
+2020-04-05 21:47:24.371  INFO 2376 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-04-05 21:47:24.372  INFO 2376 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-04-05 21:47:25.434  INFO 2376 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-05 21:47:25.438  INFO 2376 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-04-05 21:47:25.476  INFO 2376 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17ms. Found 0 Redis repository interfaces.
+2020-04-05 21:47:26.258  INFO 2376 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-05 21:47:27.073  INFO 2376 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2020-04-05 21:47:27.082  INFO 2376 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-05 21:47:27.083  INFO 2376 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-04-05 21:47:27.178  INFO 2376 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-05 21:47:27.178  INFO 2376 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2805 ms
+2020-04-05 21:47:28.125  INFO 2376 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-05 21:47:28.222  INFO 2376 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-05 21:47:28.794  INFO 2376 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-05 21:47:29.373  INFO 2376 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2020-04-05 21:47:29.377  INFO 2376 --- [restartedMain] com.yang.demo.YangbbsApplication         : Started YangbbsApplication in 5.54 seconds (JVM running for 7.178)
+2020-04-05 21:47:29.445  INFO 2376 --- [http-nio-7979-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-05 21:47:29.446  INFO 2376 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-05 21:47:29.458  INFO 2376 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2020-04-05 21:47:29.496  INFO 2376 --- [http-nio-7979-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-05 21:47:30.259  INFO 2376 --- [http-nio-7979-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-05 21:48:09.132  INFO 2376 --- [http-nio-7979-exec-6] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-04-05 21:48:09.133  INFO 2376 --- [http-nio-7979-exec-6] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-04-05 21:51:28.202  INFO 6372 --- [restartedMain] com.yang.demo.YangbbsApplication         : Starting YangbbsApplication on DESKTOP-G9DDVR8 with PID 6372 (E:\yangidea\yangbbs\target\classes started by Yiang37 in E:\yangidea\yangbbs)
+2020-04-05 21:51:28.205  INFO 6372 --- [restartedMain] com.yang.demo.YangbbsApplication         : No active profile set, falling back to default profiles: default
+2020-04-05 21:51:28.289  INFO 6372 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-04-05 21:51:28.290  INFO 6372 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-04-05 21:51:29.337  INFO 6372 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-05 21:51:29.340  INFO 6372 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-04-05 21:51:29.372  INFO 6372 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14ms. Found 0 Redis repository interfaces.
+2020-04-05 21:51:29.923  INFO 6372 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-05 21:51:30.628  INFO 6372 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2020-04-05 21:51:30.635  INFO 6372 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-05 21:51:30.635  INFO 6372 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-04-05 21:51:30.724  INFO 6372 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-05 21:51:30.725  INFO 6372 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2435 ms
+2020-04-05 21:51:31.666  INFO 6372 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-05 21:51:31.763  INFO 6372 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-05 21:51:32.316  INFO 6372 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-05 21:51:32.641  INFO 6372 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2020-04-05 21:51:32.645  INFO 6372 --- [restartedMain] com.yang.demo.YangbbsApplication         : Started YangbbsApplication in 5.03 seconds (JVM running for 6.494)
+2020-04-05 21:51:33.883  INFO 6372 --- [http-nio-7979-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-05 21:51:33.883  INFO 6372 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-05 21:51:33.893  INFO 6372 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2020-04-05 21:51:33.924  INFO 6372 --- [http-nio-7979-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-05 21:51:34.751  INFO 6372 --- [http-nio-7979-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-05 21:51:36.324  INFO 6372 --- [http-nio-7979-exec-6] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-04-05 21:51:36.327  INFO 6372 --- [http-nio-7979-exec-6] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-04-05 22:06:28.875  INFO 4172 --- [restartedMain] com.yang.demo.YangbbsApplication         : Starting YangbbsApplication on DESKTOP-G9DDVR8 with PID 4172 (E:\yangidea\yangbbs\target\classes started by Yiang37 in E:\yangidea\yangbbs)
+2020-04-05 22:06:28.882  INFO 4172 --- [restartedMain] com.yang.demo.YangbbsApplication         : No active profile set, falling back to default profiles: default
+2020-04-05 22:06:28.949  INFO 4172 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-04-05 22:06:28.950  INFO 4172 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-04-05 22:06:29.839  INFO 4172 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-05 22:06:29.843  INFO 4172 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-04-05 22:06:29.873  INFO 4172 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14ms. Found 0 Redis repository interfaces.
+2020-04-05 22:06:30.206  INFO 4172 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-05 22:06:30.801  INFO 4172 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2020-04-05 22:06:30.811  INFO 4172 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-05 22:06:30.811  INFO 4172 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-04-05 22:06:30.951  INFO 4172 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-05 22:06:30.952  INFO 4172 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2002 ms
+2020-04-05 22:06:31.872  INFO 4172 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-05 22:06:31.951  INFO 4172 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-05 22:06:32.302  INFO 4172 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-05 22:06:32.573  INFO 4172 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2020-04-05 22:06:32.575  INFO 4172 --- [restartedMain] com.yang.demo.YangbbsApplication         : Started YangbbsApplication in 4.226 seconds (JVM running for 4.995)
+2020-04-05 22:06:34.560  INFO 4172 --- [http-nio-7979-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-05 22:06:34.560  INFO 4172 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-05 22:06:34.565  INFO 4172 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-04-05 22:06:34.598  INFO 4172 --- [http-nio-7979-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-05 22:06:35.312  INFO 4172 --- [http-nio-7979-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-05 22:06:36.901  INFO 4172 --- [http-nio-7979-exec-4] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-04-05 22:06:36.902  INFO 4172 --- [http-nio-7979-exec-4] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-04-05 22:09:07.862  INFO 7420 --- [restartedMain] com.yang.demo.YangbbsApplication         : Starting YangbbsApplication on DESKTOP-G9DDVR8 with PID 7420 (E:\yangidea\yangbbs\target\classes started by Yiang37 in E:\yangidea\yangbbs)
+2020-04-05 22:09:07.866  INFO 7420 --- [restartedMain] com.yang.demo.YangbbsApplication         : No active profile set, falling back to default profiles: default
+2020-04-05 22:09:07.929  INFO 7420 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-04-05 22:09:07.929  INFO 7420 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-04-05 22:09:09.177  INFO 7420 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-05 22:09:09.181  INFO 7420 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-04-05 22:09:09.221  INFO 7420 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15ms. Found 0 Redis repository interfaces.
+2020-04-05 22:09:09.890  INFO 7420 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-05 22:09:10.372  INFO 7420 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7979 (http)
+2020-04-05 22:09:10.378  INFO 7420 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-05 22:09:10.379  INFO 7420 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-04-05 22:09:10.467  INFO 7420 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-05 22:09:10.467  INFO 7420 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2538 ms
+2020-04-05 22:09:11.327  INFO 7420 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-05 22:09:11.409  INFO 7420 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-05 22:09:11.989  INFO 7420 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-05 22:09:12.194  INFO 7420 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7979 (http) with context path ''
+2020-04-05 22:09:12.202  INFO 7420 --- [restartedMain] com.yang.demo.YangbbsApplication         : Started YangbbsApplication in 4.848 seconds (JVM running for 6.456)
+2020-04-05 22:09:15.949  INFO 7420 --- [http-nio-7979-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-05 22:09:15.949  INFO 7420 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-05 22:09:15.956  INFO 7420 --- [http-nio-7979-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2020-04-05 22:09:15.987  INFO 7420 --- [http-nio-7979-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-05 22:09:16.710  INFO 7420 --- [http-nio-7979-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
